@@ -1,0 +1,589 @@
+
+// HERO
+
+
+.site-hero {
+    @include section(4rem, $white, none);
+    @include heroLayOut(66vh, url('../img/image_hero.jpg'));
+    .container {
+        @include container(29rem);
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        min-height: 47rem;
+        .site-desc {
+            @include heroContent(100%, center, $size40, $size20);
+        }
+    }
+}
+
+@media screen and (min-width: 36em) {
+    .site-hero {
+        @include section(4rem, $white, none);
+        @include heroLayOut(66vh, url('../img/image_hero.jpg'));
+        .container {
+            @include container(46rem);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            min-height: 47rem;
+            .site-desc {
+                @include heroContent(100%, center, $size40, $size24);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 49em) {
+    .site-hero {
+        @include section(4rem, $white, none);
+        @include heroLayOut(66vh, url('../img/image_hero.jpg'));
+        .container {
+            @include container(65rem);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            min-height: 47rem;
+            .site-desc {
+                @include heroContent(100%, flex-end, $size48, $size32);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 62em) {
+    .site-hero {
+        @include section(4rem, $white, none);
+        @include heroLayOut(66vh, url('../img/image_hero.jpg'));
+        .container {
+            @include container(65rem);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            min-height: 47rem;
+            .site-desc {
+                @include heroContent(100%, flex-end, $size48, $size40);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .site-hero {
+        @include section(12rem, $white, none);
+        @include heroLayOut(62vh, url('../img/image_hero.jpg'));
+        .container {
+            @include container(127.6rem);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            min-height: 47rem;
+            .site-desc {
+                @include heroContent(75%, flex-end, $size72, $size40);
+            }
+        }
+    }
+}
+
+
+// -------------------------------------------------------------------------------
+
+// BLOG
+
+
+.last-news {
+    @include section(4rem, $white, $white);
+    .container {
+        @include container(29rem);
+        .section-title {
+            @include sectionTitle($size40, $textColor);
+        }
+        .articles {
+            @include articlesGrid(3, 1, 3.2rem, 0rem);
+            .article {
+                @include articleLayOut(3, 1, 2rem, auto, 67rem, $size16);
+                @include boxShadow();
+                .article-img {
+                    @include articleImage(26rem);
+                }
+                .article-content {
+                    @include articleContent(flex-start, 1.5rem);
+                    .article-date {
+                        @include articleDate(1rem);
+                    }
+                    .article-title {
+                        @include itemTitle($size20, $textColor, 1rem);
+                    }
+                    .bloc-text {
+                        @include textBloc(100%, $montserrat, $size16, $regular);
+                    }
+                }
+                .article-link {
+                    @include articleLink(1.6rem, 3.2rem);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 36em) {
+    .last-news {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(46rem);
+            .section-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .articles {
+                @include articlesGrid(3, 1, 3.2rem, 0rem);
+                .article {
+                    @include articleLayOut(3, 1, 2.4rem, auto, 68.5rem, $size16);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
+                    }
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-date {
+                            @include articleDate(1.6rem);
+                        }
+                        .article-title {
+                            @include itemTitle($size24, $textColor, 1rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
+                    }
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 49em) {
+    .last-news {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(65rem);
+            .section-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .articles {
+                @include articlesGrid(3, 1, 3.2rem, 0rem);
+                .article {
+                    @include articleLayOut(3, 1, 2.4rem, auto, 64rem, $size20);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
+                    }
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-date {
+                            @include articleDate(1.6rem);
+                        }
+                        .article-title {
+                            @include itemTitle($size24, $textColor, 1.6rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
+                    }
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
+                    }
+                }
+            }
+        } 
+    }
+}
+
+@media screen and (min-width: 62em) {
+    .last-news {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(89rem);
+            .section-title {
+                @include sectionTitle($size48, $textColor);
+            }
+            .articles {
+                @include articlesGrid(1, 3, 4rem, 3.2rem);
+                .article {
+                    @include articleLayOut(3, 1, 2.4rem, auto, 88rem, $size20);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
+                    }
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-date {
+                            @include articleDate(1.6rem);
+                        }
+                        .article-title {
+                            @include itemTitle($size24, $textColor, 1.6rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
+                    }
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .last-news {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(127.6rem);
+            .section-title {
+                @include sectionTitle($size48, $textColor);
+            }
+            .articles {
+                @include articlesGrid(1, 3, 4rem, 3.2rem);
+                .article {
+                    @include articleLayOut(3, 1, 2.4rem, auto, 69rem, $size20);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
+                    }
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-date {
+                            @include articleDate(1.6rem);
+                        }
+                        .article-title {
+                            @include itemTitle($size24, $textColor, 1.6rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
+                    }
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ------------------------------------------------------------------------------------------
+
+// TEAM
+
+
+
+.team {
+    @include section(4rem, $accent, $borderGrey);
+    .container {
+        @include container(29rem);
+    }
+    .section-title {
+        @include sectionTitle($size40, $white);
+    }
+    .team-items {
+        @include teamItems(4, 1, 0rem, 3.2rem);
+        .studient-item {
+            @include studientItem(2rem);
+            .studient-img {
+                @include studientImage(20rem);
+            }
+            .studient-name{
+                @include itemTitle($size20, $white, 0rem);
+            }
+            .studient-link {
+                @include studientLink($white);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 36em) {
+    .team {
+        @include section(4rem, $accent, $borderGrey);
+        .container {
+            @include container(46rem);
+        }
+        .section-title {
+            @include sectionTitle($size40, $white);
+        }
+        .team-items {
+            @include teamItems(2, 2, 3.2rem, 1.7rem);
+            .studient-item {
+                @include studientItem(2rem);
+                .studient-img {
+                    @include studientImage(22rem);
+                }
+                .studient-name{
+                    @include itemTitle($size24, $white, 0rem);
+                }
+                .studient-link {
+                    @include studientLink($white);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 49em) {
+    .team {
+        @include section(4rem, $accent, $borderGrey);
+        .container {
+            @include container(65rem);
+        }
+        .section-title {
+            @include sectionTitle($size40, $white);
+        }
+        .team-items {
+            @include teamItems(2, 2, 3.2rem, 3.2rem);
+            .studient-item {
+                @include studientItem(2rem);
+                .studient-img {
+                    @include studientImage(22rem);
+                }
+                .studient-name{
+                    @include itemTitle($size24, $white, 0rem);
+                }
+                .studient-link {
+                    @include studientLink($white);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 62em) {
+    .team {
+        @include section(4rem, $accent, $borderGrey);
+        .container {
+            @include container(89rem);
+            .section-title {
+                @include sectionTitle($size48, $white);
+            }
+            .team-items {
+                @include teamItems(1, 4, 1.7rem, 0rem);
+                .studient-item {
+                    @include studientItem(2rem);
+                    .studient-img {
+                        @include studientImage(22rem);
+                    }
+                    .studient-name{
+                        @include itemTitle($size24, $white, 0rem);
+                    }
+                    .studient-link {
+                        @include studientLink($white);
+                    }
+                }
+            }
+        } 
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .team {
+        @include section(4rem, $accent, $borderGrey);
+        .container {
+            @include container(127.6rem);
+            .section-title {
+                @include sectionTitle($size48, $white);
+            }
+            .team-items {
+                @include teamItems(1, 4, 3.2rem, 0rem);
+                .studient-item {
+                    @include studientItem(2rem);
+                    .studient-img {
+                        @include studientImage(22rem);
+                    }
+                    .studient-name{
+                        @include itemTitle($size24, $white, 0rem);
+                    }
+                    .studient-link {
+                        @include studientLink($white);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// ---------------------------------------------------------------------
+
+// FORMATIONS
+
+
+.formations {
+    @include section(4rem, $white, $white);
+    .container {
+        @include container(29rem);
+        .section-title {
+            @include sectionTitle($size40, $textColor);
+        }
+        .articles {
+            @include articlesGrid(2, 1, 3.2rem, 0rem);
+            .article {
+                @include articleLayOut(3, 1, 4rem, auto, 61rem, $size16);
+                @include boxShadow();
+                .article-img {
+                    @include articleImage(26rem);
+                }
+                .article-content {
+                    @include articleContent(flex-start, 1rem);
+                    .article-title{
+                        @include itemTitle($size20, $textColor, 1.6rem);
+                    }
+                    .bloc-text {
+                        @include textBloc(100%, $montserrat, $size16, $regular);
+                    }
+                }
+                .article-link {
+                    @include articleLink(1.6rem, 3.2rem);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 36rem) {
+    .formations {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(46rem);
+            .section-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .articles {
+                @include articlesGrid(2, 1, 3.2rem, 0rem);
+                .article {
+                    @include articleLayOut(3, 1, 4rem, auto, 64rem, $size16);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
+                    }
+                    .article-content {
+                        @include articleContent(flex-start, 1rem);
+                        .article-title{
+                            @include itemTitle($size24, $textColor, 4rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
+                    }
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 49rem) {
+    .formations {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(65rem);
+            .section-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .articles {
+                @include articlesGrid(2, 1, 3.2rem, 0rem);
+                .article {
+                    @include articleLayOut(3, 1, 4rem, auto, 61rem, $size20);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
+                    }
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-title{
+                            @include itemTitle($size24, $textColor, 4rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
+                    }
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    .formations {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(89rem);
+            .section-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .articles {
+                @include articlesGrid(1, 2, 0rem, 3.2rem);
+                .article {
+                    @include articleLayOut(3, 1, 4rem, auto, 67rem, $size20);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
+                    }
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-title{
+                            @include itemTitle($size24, $textColor, 4rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
+                    }
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .formations {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(127.6rem);
+            .section-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .articles {
+                @include articlesGrid(1, 2, 0rem, 3.2rem);
+                .article {
+                    @include articleLayOut(3, 1, 4rem, auto, 61rem, $size20);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
+                    }
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-title{
+                            @include itemTitle($size24, $textColor, 4rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
+                    }
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
+                    }
+                }
+            }
+        }
+    }
+}

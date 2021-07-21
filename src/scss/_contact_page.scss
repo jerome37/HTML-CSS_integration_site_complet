@@ -1,0 +1,129 @@
+
+.contact-section {
+    @include section(4rem, $white, $white);
+    .container {
+        @include container(29rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 66rem;
+        .form-title {
+            @include sectionTitle($size40, $textColor);
+        }
+        .form {
+            @include formLayOut(100%, 3, 1, 46rem);
+            .form-item{
+                @include formItem($size20, $size16, 3);
+            }
+            .form-button {
+                @include formButton(center);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 36rem) {
+    .contact-section {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(46rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 66rem;
+            .form-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .form {
+                @include formLayOut(100%, 3, 1, 46rem);
+                .form-item{
+                    @include formItem($size20, $size16, 3);
+                }
+                .form-button {
+                    @include formButton(center);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 49rem) {
+    .contact-section {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(65rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 66rem;
+            .form-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .form {
+                @include formLayOut(100%, 2, 2, 46rem);
+                .form-item{
+                    @include formItem($size20, $size20, 2/span 2);
+                }
+                .form-button {
+                    @include formButton(flex-end);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    .contact-section {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(89rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 66rem;
+            .form-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .form {
+                @include formLayOut(100%, 2, 2, 46rem);
+                .form-item{
+                    @include formItem($size20, $size20, 2/span 2);
+                }
+                .form-button {
+                    @include formButton(flex-end);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 75rem){
+    .contact-section {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(127.6rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 66rem;
+            .form-title {
+                @include sectionTitle($size48, $textColor);
+            }
+            .form {
+                @include formLayOut(82%, 2, 2, 46rem);
+                .form-item{
+                    @include formItem($size20, $size20, 2/span 2);
+                }
+                .form-button {
+                    @include formButton(flex-end);
+                }
+            }
+        }
+    }
+
+}

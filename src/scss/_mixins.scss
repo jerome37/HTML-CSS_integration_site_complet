@@ -1,0 +1,611 @@
+
+// -------------------------------------------------
+
+// COMPONENTS
+
+// LINKS
+@mixin menuLink() {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: auto;
+    .menu-link {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        transition: .3s;
+        &:hover,
+        &:focus,
+        &:active {
+            color: $accent;
+            background-color: $white;
+        }
+    }
+}
+
+@mixin menuLinkToggle($width, $padding) {
+    width: $width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: $padding;
+    padding-bottom: $padding;
+    .menu-link {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        margin-left: -2rem;
+        transition: .3s;
+        &:hover,
+        &:focus,
+        &:active {
+            color: $accent;
+            background-color: $white;
+        }
+    }
+}
+
+@mixin swipButtons(){
+    display: flex;
+    padding-top: 8rem;
+    justify-content: center;
+    .button-item {
+        .swip-button {
+            width: 3rem;
+            height: 3rem;
+            font-family: $montserrat;
+            font-size: $size16;
+            border: 1px solid $accent;
+            border-radius: .5rem;
+            background-color: $white;
+            color: $accent;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $accent;
+                color: $white;
+            }
+        }
+        &:nth-child(n+2) {
+            margin-left: 2rem;
+        }
+    }
+}
+
+// -----------------------------------------------------
+
+// LAY OUT
+
+// SECTIONS
+@mixin section($padding, $bgColor, $borderColor) {
+    padding-top: $padding;
+    padding-bottom: $padding;
+    background-color: $bgColor;
+    border: 1px solid $borderColor;
+}
+
+// CONTAINERS
+@mixin container($width) {
+    max-width: $width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// TEXT BLOCS
+
+@mixin textBloc($width, $fontFamily, $textSize, $textWeight) {
+    font-family: $fontFamily;
+    font-size: $textSize;
+    font-weight: $textWeight;
+    line-height: 1.5;
+    color: $textColor;
+    width: $width;
+}
+
+// HEADER
+@mixin header($containerWidth, $fontSizeLogo, $fontSizeLink, $menuGap) {
+    background-color: $accent;
+    color: $white;
+    font-family: $montserrat;
+    font-size: $fontSizeLink;
+    .container {
+        @include container($containerWidth);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .site-logo {
+            @include siteTitle($fontSizeLogo);
+            line-height: 1;
+        }
+        .site-menu {
+            display: flex;
+            align-items: center;
+            .toggle-menu {
+                display: none;
+            }
+            .menu {
+                visibility: visible;
+                position: static;
+                &[hidden] {
+                    visibility: visible;
+                    position: static;
+                    display: grid;
+                    grid-template-columns: repeat(5, auto);
+                    gap: $menuGap;
+                    transform: none;
+                    .menu-items {
+                        @include menuLink();
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin headerToggle($containerWidth, $fontSizeLogo, $fontSizeLink, $width, $padding) {
+    background-color: $accent;
+    color: $white;
+    font-family: $montserrat;
+    font-size: $fontSizeLink;
+    .container {
+        @include container($containerWidth);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .site-logo {
+            @include siteTitle($fontSizeLogo);
+            line-height: 1;
+        }
+        .site-menu {
+            display: flex;
+            align-items: center;
+            .toggle-menu {
+                display: flex;
+                padding: 0.25rem 1rem;
+                color: $accent;
+                background-color: $white;
+                border: 0;
+                transition: .1s;
+                &:hover,
+                &:active {
+                    outline: 2px solid $white;
+                    background-color: $accent;
+                    color: $white;
+                }
+                &:focus {
+                    outline: 2px solid $white;
+                    background-color: $accent;
+                    color: $white;
+                }
+            }
+            .menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: $accent;
+                display: flex;
+                flex-direction: column;
+                transition: .5s;
+                margin-left: -1px;
+                margin-right: -1px;
+                &[hidden] {
+                    display: block;
+                    visibility: hidden;
+                    transform: translateX(-100%);
+                    transition-timing-function: cubic-bezier(.56,-0.8,.43,1.73);
+                    .menu-items {
+                        @include menuLinkToggle($width, $padding);
+                    }
+                }
+                &:not([hidden]) {
+                    transform: translateX(0);
+                    transition-timing-function: cubic-bezier(.56,-0.8,.43,1.73);
+                    .menu-items {
+                        @include menuLinkToggle($width, $padding);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//HERO
+@mixin heroLayOut($height, $image) {
+    min-height: $height;
+    background-image: $image;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+    
+@mixin heroContent($width, $alignemnt, $sizeTitle, $sizeLink) {
+    display: flex;
+    flex-direction: column;
+    align-items: $alignemnt;
+    justify-content: space-between;
+    width: $width;
+    height: auto;
+    background-color: $fadeGrey;
+    padding: 2.6rem;
+    .desc {
+        font-family: $raleway;
+        font-size: $sizeTitle;
+        color: $white;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+    .cta-meet {
+        font-family: $montserrat;
+        font-size: $sizeLink;
+        color: $white;
+        text-decoration: none;
+        text-align: center;
+        line-height: 1;
+        padding: 2rem 3rem;
+        background-color: $accent;
+        border: 1px solid $borderGrey;
+        transition: .2s;
+        &:hover,
+        &:focus {
+            color: $accent;
+            background-color: $white;
+        }
+    }
+}
+
+
+// FOOTER
+@mixin footer($containerWidth, $nbrColumns, $nbrRows, $gap, $mentionsFlexDir, $socialsJustify) {
+    background-color: $accent;
+    color: $white;
+    font-family: $montserrat;
+    font-size: $size16;
+    .container {
+        @include container($containerWidth);
+        display: grid;
+        grid-template-columns: repeat($nbrColumns, auto);
+        grid-template-rows: repeat($nbrRows, auto);
+        gap: $gap;
+        .contacts {
+            .bolder {
+                font-weight: $semiBold;
+            }
+            .contacts-txt {
+                font-size: $size20;
+                line-height: 1.8;
+            }
+        }
+        .mentions {
+            display: flex;
+            flex-direction: $mentionsFlexDir;
+            justify-content: space-between;
+            align-self: center;
+            .legal-mentions,
+            .confidentiality {
+                font-size: $size16;
+                color: $white;
+                line-height: 2.25;
+                text-decoration: none;
+                padding: .3rem 1rem;
+                transition: .2s;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $accent;
+                    background-color: $white;
+                }
+            }
+        }
+        .socials {
+            width: 22rem;
+            justify-self: $socialsJustify;
+            align-self: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transition: .2s;
+            .social-link:hover {
+                .social-icone {
+                    transform: scale(1.2);
+                    transition: .3s;
+                }
+            }
+            .social-link:focus {
+                outline: 2px solid $white;
+                outline-offset: 1rem;
+                .social-icone {
+                    transform: scale(1.2);
+                    transition: .3s;
+                }
+            }
+        }
+    }
+}
+
+
+// ----------------------------------------------------
+
+// TITLES
+@mixin siteTitle($fontSize){
+    font-family: $raleway;
+    font-size: $fontSize;
+    font-weight: $bold;
+}
+
+@mixin sectionTitle($fontSize, $color) {
+    font-family: $raleway;
+    font-size: $fontSize;
+    font-weight: $bold;
+    line-height: 1;
+    color: $color;
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+@mixin itemTitle($fontSize, $color, $margin) {
+    font-family: 'raleway', sans-serif;
+    font-size: $fontSize;
+    font-weight: $semiBold;
+    line-height: 1.5;
+    color: $color; //$color
+    // margin-top: 2rem;
+    margin-bottom: $margin;
+}
+
+
+// ----------------------------------------------------------------
+
+// ARTICLES
+
+@mixin articlesGrid($nbrRows, $nbrColumns, $gapRow, $gapColumn) {
+    display: grid;
+    grid-template-columns: repeat($nbrColumns, 1fr);
+    grid-template-rows: repeat($nbrRows, 1fr);
+    row-gap: $gapRow;
+    column-gap: $gapColumn;
+}
+
+@mixin articleLayOut($nbRows, $nbColumns, $gap, $width, $height, $textSize) {
+    display: grid;
+    grid-template-rows: repeat($nbRows, 1fr);
+    grid-template-columns: repeat($nbColumns, 1fr);
+    gap: $gap;
+    
+    width: $width;
+    height: $height;
+
+    font-family: $montserrat;
+    font-size: $textSize;
+    font-weight: $regular;
+    border-radius: .4rem;
+}
+
+@mixin articleImage($height){
+    width: 100%;
+    height: $height;
+    object-fit: cover;
+    object-position: center;
+}
+
+@mixin articleContent($alignement, $margin) {
+    display: flex;
+    flex-direction: column;
+    align-items: $alignement;
+    margin-right: $margin;
+    margin-left: $margin;
+}
+
+@mixin articleLink($sizeText, $height) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: $height;
+    font-size: $sizeText;
+
+    color: $white;
+    text-decoration: none;
+    background-color: $accent;
+    border: 2px solid $accent;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: .2s;
+    .article-link-icone {
+        width: 2rem;
+        height: 2rem;
+        margin-left: 1.6rem
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color: $accent;
+        background-color: $white;
+        border: 2px solid $accent;
+        .article-link-icone {
+            filter: invert(37%) sepia(45%) saturate(3029%) hue-rotate(336deg) brightness(101%) contrast(98%);
+        }
+    }
+}
+
+@mixin articleDate($margin) {
+    display: flex;
+    align-items: center;
+    margin-bottom: $margin;
+    .date {
+        margin-left: .8rem;
+        color: $dateColor;
+    }
+}
+
+
+// TEAM ITEMS
+@mixin teamItems($nbrRows, $nbrColumns, $gapColumn, $gapRow){
+    display: grid;
+    grid-template-columns: repeat($nbrColumns, 1fr);
+    grid-template-rows: repeat($nbrRows, 1fr);
+    column-gap: $gapColumn; //3.2rem;
+    row-gap: $gapRow;
+}
+
+@mixin studientItem($gap) {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: $gap;
+
+    font-family: "Montserrat",sans-serif;
+    text-align: center;
+    justify-self: center;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+@mixin studientImage($portraitWidth) {
+    width: $portraitWidth;
+    height: $portraitWidth;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-right: auto; //4rem;
+    margin-left: auto; //4rem;
+}
+
+@mixin studientLink($colorLink) {
+    color: $colorLink;
+    border: 2px solid transparent;
+    padding: .2rem 1rem;
+    transition: .2s;
+    &:hover,
+    &:focus {
+        color: $accent;
+        border: 2px solid $accent;
+        background-color: $white;
+    }
+}
+
+@mixin profilLayOut($nbColumns, $nbRows, $gapRow, $gapColumn) {
+    display: grid;
+    grid-template-columns: repeat($nbColumns, auto);
+    grid-template-rows: repeat($nbRows, auto);
+    row-gap: $gapRow;
+    column-gap: $gapColumn;
+}
+
+// -----------------------------------------------------------------
+
+// FORM
+
+@mixin formLayOut($width, $nbrRows, $nbrColumns, $height){
+    width: $width;
+    .form-content {
+        display:grid;
+        grid-template-rows: repeat($nbrRows, auto);
+        grid-template-columns: repeat($nbrColumns, auto);
+        column-gap: 3.2rem;
+        row-gap: 4rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+        max-height: $height;
+    }
+}
+
+@mixin formItem($titleSize, $textSize, $messageSpan){
+    display: flex;
+    flex-direction: column;
+    .input-title {
+        font-family: $montserrat;
+        font-size: $titleSize; 
+        line-height: 1.5;
+        color: $textColor;
+        margin-bottom: 2rem;
+    }
+    .form-input {
+        width: 100%;
+
+        font-family: $montserrat;
+        font-size: $textSize; 
+        font-weight: 400;
+        color: $textColor;
+
+        border: none;
+        border-bottom: 1px solid $borderGrey;
+
+        resize: none;
+        &::placeholder {
+            color: $formGrey;
+            font-style: italic;
+        }
+        &::selection {
+            background-color: $accent;
+            color: $white;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            offset: none;
+            outline: 1px solid $accent;
+            outline-offset: 1rem;
+        }
+    }
+    &:nth-child(3){
+        grid-area: $messageSpan; 
+    }
+}
+
+@mixin formButton($justify){
+    display: flex;
+    justify-content: $justify;
+    .submit-btn{
+        display: flex;
+        padding: 1rem 2rem;
+        align-items: center;
+
+        font-family: $montserrat;
+        font-size: $size24;
+        line-height: 1.2;
+        background-color: $accent;
+        color: white;
+        border: 2px solid $accent;
+        border-radius: .4rem;
+        .button-icone {
+            width: 2rem;
+            height: 2rem;
+            margin-left: 2.1rem;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            offset: none;
+            outline: transparent;
+            border: 2px solid $accent;
+            background-color: $white;
+            color: $accent;
+            .button-icone {
+                filter: invert(37%) sepia(45%) saturate(3029%) hue-rotate(336deg) brightness(101%) contrast(98%);
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------
+
+// EFFECTS
+
+@mixin boxShadow(){
+    box-shadow: 0 0 2.8rem $shadowGrey;
+}
+
+
+@mixin flexContainer(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin gridContainer($nbRows, $gap){
+    display: grid;
+    grid-template-rows: repeat($nbRows, auto);
+    row-gap: $gap;
+}

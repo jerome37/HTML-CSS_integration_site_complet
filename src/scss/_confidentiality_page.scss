@@ -1,0 +1,78 @@
+
+.confidentiality-section {
+    @include section(4rem, $white, $accent);
+    .container {
+        @include container(29rem);
+        @include flexContainer();
+    }
+    .section-title {
+        @include sectionTitle($size24, $textColor);
+    }
+    .section-desc {
+        @include textBloc(100%, $montserrat, $size16, $regular);
+    }
+}
+
+@media screen and (min-width: 36rem) {
+    .confidentiality-section {
+        @include section(4rem, $white, $accent);
+        .container {
+            @include container(46rem);
+            @include flexContainer();
+        }
+        .section-title {
+            @include sectionTitle($size32, $textColor);
+        }
+        .section-desc {
+            @include textBloc(100%, $montserrat, $size16, $regular);
+        }
+    }
+}
+
+@media screen and (min-width: 49rem) {
+    .confidentiality-section {
+        @include section(4rem, $white, $accent);
+        .container {
+            @include container(65rem);
+            @include flexContainer();
+        }
+        .section-title {
+            @include sectionTitle($size40, $textColor);
+        }
+        .section-desc {
+            @include textBloc(100%, $montserrat, $size20, $regular);
+        }
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    .confidentiality-section {
+        @include section(4rem, $white, $accent);
+        .container {
+            @include container(89rem);
+            @include flexContainer();
+        }
+        .section-title {
+            @include sectionTitle($size40, $textColor);
+        }
+        .section-desc {
+            @include textBloc(66%, $montserrat, $size20, $regular);
+        }
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .confidentiality-section {
+        @include section(4rem, $white, $accent);
+        .container {
+            @include container(127.6rem);
+            @include flexContainer();
+        }
+        .section-title {
+            @include sectionTitle($size40, $textColor);
+        }
+        .section-desc {
+            @include textBloc(66%, $montserrat, $size20, $regular);
+        }
+    }
+}

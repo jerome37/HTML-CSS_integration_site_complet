@@ -1,0 +1,173 @@
+
+.section-studient {
+    @include section(4rem, $white, $white);
+    .container {
+        @include container(29rem);
+        @include gridContainer(4, 2rem);
+        .studient-img {
+            @include studientImage(22rem);
+        }
+        .studient-name {
+            @include sectionTitle($size24, $bold);
+        }
+        .studient-profil {
+            @include profilLayOut(1, 2, 1.5rem, 0rem);
+            .studient-item {
+                .item-title {
+                    @include itemTitle($size20, $textColor, 1rem);
+                }
+                .item-text {
+                    @include textBloc(100%, $montserrat, $size16, $regular);
+                }
+            }
+        }
+        .studient-abstract {
+            .abstract-title {
+                @include itemTitle($size20, $textColor, 1rem);
+            }
+            .abstract-text {
+                @include textBloc(100%, $montserrat, $size20, $regular);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 36rem) {
+    .section-studient {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(46rem);
+            @include gridContainer(4, 3rem);
+            .studient-img {
+                @include studientImage(32rem);
+            }
+            .studient-name {
+                @include sectionTitle($size32, $bold);
+            }
+            .studient-profil {
+                @include profilLayOut(2, 2, 1.5rem, 0rem);
+                .studient-item {
+                    .item-title {
+                        @include itemTitle($size20, $textColor, 1rem);
+                    }
+                    .item-text {
+                        @include textBloc(100%, $montserrat, $size16, $regular);
+                    }
+                }
+            }
+            .studient-abstract {
+                .abstract-title {
+                    @include itemTitle($size20, $textColor, 1rem);
+                }
+                .abstract-text {
+                    @include textBloc(100%, $montserrat, $size20, $regular);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 49rem) {
+    .section-studient {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(65rem);
+            @include gridContainer(4, 4rem);
+            .studient-img {
+                @include studientImage(32rem);
+            }
+            .studient-name {
+                @include sectionTitle($size40, $bold);
+            }
+            .studient-profil {
+                @include profilLayOut(2, 2, 2.5rem, 2rem);
+                .studient-item {
+                    .item-title {
+                        @include itemTitle($size20, $textColor, 1.5rem);
+                    }
+                    .item-text {
+                        @include textBloc(100%, $montserrat, $size16, $regular);
+                    }
+                }
+            }
+            .studient-abstract {
+                .abstract-title {
+                    @include itemTitle($size20, $textColor, 1.5rem);
+                }
+                .abstract-text {
+                    @include textBloc(100%, $montserrat, $size20, $regular);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    .section-studient {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(89rem);
+            @include gridContainer(4, 4rem);
+            .studient-img {
+                @include studientImage(32rem);
+            }
+            .studient-name {
+                @include sectionTitle($size48, $bold);
+            }
+            .studient-profil {
+                @include profilLayOut(4, 2, 3.6rem, 2rem);
+                .studient-item {
+                    .item-title {
+                        @include itemTitle($size24, $textColor, 1.5rem);
+                    }
+                    .item-text {
+                        @include textBloc(100%, $montserrat, $size20, $regular);
+                    }
+                }
+            }
+            .studient-abstract {
+                .abstract-title {
+                    @include itemTitle($size24, $textColor, 1.5rem);
+                }
+                .abstract-text {
+                    @include textBloc(100%, $montserrat, $size24, $regular);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .section-studient {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(127.6rem);
+            @include gridContainer(4, 4rem);
+            .studient-img {
+                @include studientImage(40.4rem);
+            }
+            .studient-name {
+                @include sectionTitle($size48, $bold);
+            }
+            .studient-profil {
+                @include profilLayOut(4, 2, 3.6rem, 4rem);
+                .studient-item {
+                    .item-title {
+                        @include itemTitle($size24, $textColor, 2rem);
+                    }
+                    .item-text {
+                        @include textBloc(100%, $montserrat, $size20, $regular);
+                    }
+                }
+            }
+            .studient-abstract {
+                .abstract-title {
+                    @include itemTitle($size24, $textColor, 2rem);
+                }
+                .abstract-text {
+                    @include textBloc(100%, $montserrat, $size24, $regular);
+                }
+            }
+        }
+    }
+}

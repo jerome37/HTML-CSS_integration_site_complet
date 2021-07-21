@@ -1,0 +1,148 @@
+
+.studients {
+    @include section(4rem, $white, $white);
+    .container {
+        @include container(29rem);
+        .section-title {
+            @include sectionTitle($size24, $textColor);
+        }
+        .team-items {
+            @include teamItems(16, 1, 0rem, 3.2rem);
+            .studient-item {
+                @include studientItem(2rem);
+                .studient-img {
+                    @include studientImage(20rem);
+                }
+                .studient-name{
+                    @include itemTitle($size20, $textColor, 0rem);
+                }
+                .studient-link {
+                    @include studientLink($accent);
+                }
+            }
+        }
+        .list-buttons {
+            @include swipButtons();
+        }
+    }   
+}
+
+@media screen and (min-width: 36em) {
+    .studients {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(46rem);
+            .section-title {
+                @include sectionTitle($size32, $textColor);
+            }
+            .team-items {
+                @include teamItems(8, 2, 1.7rem, 3.2rem);
+                .studient-item {
+                    @include studientItem(2rem);
+                    .studient-img {
+                        @include studientImage(20rem);
+                    }
+                    .studient-name{
+                        @include itemTitle($size24, $textColor, 0rem);
+                    }
+                    .studient-link {
+                        @include studientLink($accent);
+                    }
+                }
+            }
+            .list-buttons {
+                @include swipButtons();
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 49em) {
+    .studients {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(65rem);
+            .section-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .team-items {
+                @include teamItems(8, 2, 3.2rem, 3.2rem);
+                .studient-item {
+                    @include studientItem(2rem);
+                    .studient-img {
+                        @include studientImage(22rem);
+                    }
+                    .studient-name{
+                        @include itemTitle($size24, $textColor, 0rem);
+                    }
+                    .studient-link {
+                        @include studientLink($accent);
+                    }
+                }
+            }
+            .list-buttons {
+                @include swipButtons();
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 62em) {
+    .studients {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(89rem);
+            .section-title {
+                @include sectionTitle($size48, $textColor);
+            }
+            .team-items {
+                @include teamItems(4, 4, 1.7rem, 1.7rem);
+                .studient-item {
+                    @include studientItem(2rem);
+                    .studient-img {
+                        @include studientImage(22rem);
+                    }
+                    .studient-name{
+                        @include itemTitle($size24, $textColor, 0rem);
+                    }
+                    .studient-link {
+                        @include studientLink($accent);
+                    }
+                }
+            }
+            .list-buttons {
+                @include swipButtons();
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .studients {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(127.6rem);
+            .section-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .team-items {
+                @include teamItems(4, 4, 3.2rem, 1.7rem);
+                .studient-item {
+                    @include studientItem(2rem);
+                    .studient-img {
+                        @include studientImage(22rem);
+                    }
+                    .studient-name{
+                        @include itemTitle($size24, $textColor, 0rem);
+                    }
+                    .studient-link {
+                        @include studientLink($accent);
+                    }
+                }
+            }
+            .list-buttons {
+                @include swipButtons();
+            }
+        } 
+    }
+}

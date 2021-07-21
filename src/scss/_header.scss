@@ -1,0 +1,34 @@
+
+.site-header {
+    position: relative;
+    @include section(2.2rem, $accent, $accent);
+    @include headerToggle(29rem, $size24, $size16, 29rem, .5rem);
+}
+
+@media screen and (min-width: 36em) {
+    .site-header {
+        @include section(2.2rem, $accent, $accent);
+        @include headerToggle(46rem, $size32, $size20, 46rem, 1rem);
+    }
+}
+
+@media screen and (min-width: 49em) {
+    .site-header {
+        @include section(2.2rem, $accent, $accent);
+        @include headerToggle(65rem, $size40, $size20, 65rem, 1rem);
+    }
+}
+
+@media screen and (min-width: 62em) {
+    .site-header {
+        @include section(2.2rem, $accent, $accent);
+        @include header(89rem, $size40, $size16, 1rem);
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .site-header {
+        @include section(2.2rem, $accent, $accent);
+        @include header(127.6rem, $size48, $size20, 2rem);
+    }
+}

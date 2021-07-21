@@ -1,0 +1,133 @@
+
+.formation-hero {
+    @include section(4rem, $white, $borderGrey);
+    @include heroLayOut(30vh, url('../img/formation_1.jpg'));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        @include container(29rem);
+        .formation-title {
+            @include sectionTitle($size24, $white);
+        }
+    }
+}
+
+.formation-desc {
+    @include section(4rem, $white, $white);
+    .container {
+        @include container(29rem);
+        @include flexContainer();
+        .formation-text {
+            @include textBloc(100%, $raleway, $size20, $semiBold);
+        }
+    }
+}
+
+@media screen and (min-width: 36rem) {
+    .formation-hero {
+        @include section(4rem, $white, $borderGrey);
+        @include heroLayOut(30vh, url('../img/formation_1.jpg'));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .container {
+            @include container(46rem);
+            .formation-title {
+                @include sectionTitle($size32, $white);
+            }
+        }
+    }
+    
+    .formation-desc {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(46rem);
+            @include flexContainer();
+            .formation-text {
+                @include textBloc(100%, $raleway, $size20, $semiBold);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 49rem) {
+    .formation-hero {
+        @include section(4rem, $white, $borderGrey);
+        @include heroLayOut(40vh, url('../img/formation_1.jpg'));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .container {
+            @include container(65rem);
+            .formation-title {
+                @include sectionTitle($size40, $white);
+            }
+        }
+    }
+    
+    .formation-desc {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(65rem);
+            @include flexContainer();
+            .formation-text {
+                @include textBloc(66%, $raleway, $size20, $semiBold);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    .formation-hero {
+        @include section(4rem, $white, $borderGrey);
+        @include heroLayOut(40vh, url('../img/formation_1.jpg'));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .container {
+            @include container(89rem);
+            .formation-title {
+                @include sectionTitle($size48, $white);
+            }
+        }
+    }
+    
+    .formation-desc {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(65rem);
+            @include flexContainer();
+            .formation-text {
+                @include textBloc(66%, $raleway, $size24, $semiBold);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 75rem){
+    .formation-hero {
+        @include section(4rem, $white, $borderGrey);
+        @include heroLayOut(40vh, url('../img/formation_1.jpg'));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .container {
+            @include container(127.6rem);
+            .formation-title {
+                @include sectionTitle($size48, $white);
+            }
+        }
+    }
+    
+    .formation-desc {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(127.6rem);
+            @include flexContainer();
+            .formation-text {
+                @include textBloc(66%, $raleway, $size24, $semiBold);
+            }
+        }
+    }
+}

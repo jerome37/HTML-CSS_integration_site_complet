@@ -1,0 +1,209 @@
+
+.formations-section {
+    @include section(4rem, $white, $white);
+    .container {
+        @include container(29rem);
+        @include flexContainer();
+        .section-title {
+            @include sectionTitle($size40, $textColor);
+        }
+        .section-desc{
+            @include textBloc(100%, $raleway, $size20, $semiBold);
+            margin-bottom: 4rem;
+        }
+        .articles {
+            @include articlesGrid(2, 1, 3.2rem, 0rem);
+            .article {
+                @include articleLayOut(3, 1, 4rem, auto, 61rem, $size16);
+                @include boxShadow();
+                .article-img {
+                    @include articleImage(26rem);
+                }
+                .article-content {
+                    @include articleContent(flex-start, 1rem);
+                    .article-title{
+                        @include itemTitle($size20, $textColor, 1.6rem);
+                    }
+                    .bloc-text {
+                        @include textBloc(100%, $montserrat, $size16, $regular);
+                    }
+                }
+                .article-link {
+                    @include articleLink(1.6rem, 3.2rem);
+                }
+            }
+        }
+        .list-buttons {
+            @include swipButtons();
+        }
+    }
+}
+
+@media screen and (min-width: 36rem) {
+    .formations-section {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(46rem);
+            @include flexContainer();
+            .section-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .section-desc{
+                @include textBloc(66%, $raleway, $size20, $semiBold);
+                margin-bottom: 4rem;
+            }
+            .articles {
+                @include articlesGrid(2, 1, 3.2rem, 0rem);
+                .article {
+                    @include articleLayOut(3, 1, 4rem, auto, 64rem, $size16);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
+                    }
+                    .article-content {
+                        @include articleContent(flex-start, 1rem);
+                        .article-title{
+                            @include itemTitle($size24, $textColor, 4rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
+                    }
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
+                    }
+                }
+            }
+            .list-buttons {
+                @include swipButtons();
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 49rem) {
+    .formations-section {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(65rem);
+            @include flexContainer();
+            .section-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .section-desc{
+                @include textBloc(66%, $raleway, $size20, $semiBold);
+                margin-bottom: 4rem;
+            }
+            .articles {
+                @include articlesGrid(2, 1, 4rem, 0rem);
+                .article {
+                    @include articleLayOut(3, 1, 4rem, auto, 61rem, $size20);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
+                    }
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-title{
+                            @include itemTitle($size24, $textColor, 4rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
+                    }
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
+                    }
+                }
+            }
+            .list-buttons {
+                @include swipButtons();
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    .formations-section {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(89rem);
+            @include flexContainer();
+            .section-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .section-desc{
+                @include textBloc(66%, $raleway, $size24, $semiBold);
+                margin-bottom: 4rem;
+            }
+            .articles {
+                @include articlesGrid(1, 2, 4rem, 3.2rem);
+                .article {
+                    @include articleLayOut(3, 1, 4rem, auto, 67rem, $size20);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
+                    }
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-title{
+                            @include itemTitle($size24, $textColor, 4rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
+                    }
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
+                    }
+                }
+            }
+            .list-buttons {
+                @include swipButtons();
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .formations-section {
+        @include section(4rem, $white, $white);
+        .container {
+            @include container(127.6rem);
+            @include flexContainer();
+            .section-title {
+                @include sectionTitle($size40, $textColor);
+            }
+            .section-desc{
+                @include textBloc(66%, $raleway, $size24, $semiBold);
+                margin-bottom: 4rem;
+            }
+            .articles {
+                @include articlesGrid(1, 2, 4rem, 3.2rem);
+                .article {
+                    @include articleLayOut(3, 1, 4rem, auto, 61rem, $size20);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
+                    }
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-title{
+                            @include itemTitle($size24, $textColor, 4rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
+                    }
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8r);
+                    }
+                }
+            }
+            .list-buttons {
+                @include swipButtons();
+            }
+        }
+    }
+}
+

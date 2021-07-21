@@ -1,0 +1,138 @@
+
+.actualite {
+    @include section(4rem, $white, $white );
+    .container {
+        @include container(29rem);
+        @include flexContainer();
+        .article {
+            @include articleLayOut(2, 1, 2rem, 100%, 200rem, $size20);
+            .article-img {
+                @include articleImage(26rem);
+            }
+            .article-content {
+                @include articleContent(center, 0rem);
+                .article-title {
+                    @include sectionTitle($size24, $textColor);
+                }
+                .article-date {
+                    @include articleDate(1.6rem);
+                }
+                .bloc-text {
+                    @include textBloc(100%, $montserrat, $size16, $regular);
+                }
+            }
+        }
+    }    
+}
+
+@media screen and (min-width: 36rem) {
+    .actualite {
+        @include section(4rem, $white, $white );
+        .container {
+            @include container(46rem);
+            @include flexContainer();
+            .article {
+                @include articleLayOut(2, 1, 3rem, 100%, 142rem, $size20);
+                .article-img {
+                    @include articleImage(30rem);
+                }
+                .article-content {
+                    @include articleContent(center, 0rem);
+                    .article-title {
+                        @include sectionTitle($size32, $textColor);
+                    }
+                    .article-date {
+                        @include articleDate(2rem);
+                    }
+                    .bloc-text {
+                        @include textBloc(100%, $montserrat, $size16, $regular);
+                    }
+                }
+            }
+        }    
+    }
+}
+
+@media screen and (min-width: 49rem) {
+    .actualite {
+        @include section(4rem, $white, $white );
+        .container {
+            @include container(65rem);
+            @include flexContainer();
+            .article {
+                @include articleLayOut(2, 1, 4rem, 66%, 155rem, $size20);
+                .article-img {
+                    @include articleImage(34rem);
+                }
+                .article-content {
+                    @include articleContent(center, 0rem);
+                    .article-title {
+                        @include sectionTitle($size32, $textColor);
+                    }
+                    .article-date {
+                        @include articleDate(3rem);
+                    }
+                    .bloc-text {
+                        @include textBloc(100%, $montserrat, $size16, $regular);
+                    }
+                }
+            }
+        }    
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    .actualite {
+        @include section(4rem, $white, $white );
+        .container {
+            @include container(89rem);
+            @include flexContainer();
+            .article {
+                @include articleLayOut(2, 1, 4rem, 66%, 180rem, $size20);
+                .article-img {
+                    @include articleImage(44rem);
+                }
+                .article-content {
+                    @include articleContent(center, 0rem);
+                    .article-title {
+                        @include sectionTitle($size40, $textColor);
+                    }
+                    .article-date {
+                        @include articleDate(3rem);
+                    }
+                    .bloc-text {
+                        @include textBloc(100%, $montserrat, $size20, $regular);
+                    }
+                }
+            }
+        }    
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .actualite {
+        @include section(4rem, $white, $white );
+        .container {
+            @include container(127.6rem);
+            @include flexContainer();
+            .article {
+                @include articleLayOut(2, 1, 4rem, 66%, 160rem, $size20);
+                .article-img {
+                    @include articleImage(54rem);
+                }
+                .article-content {
+                    @include articleContent(center, 0rem);
+                    .article-title {
+                        @include sectionTitle($size48, $textColor);
+                    }
+                    .article-date {
+                        @include articleDate(4rem);
+                    }
+                    .bloc-text {
+                        @include textBloc(100%, $montserrat, $size20, $regular);
+                    }
+                }
+            }
+        }    
+    }
+}
