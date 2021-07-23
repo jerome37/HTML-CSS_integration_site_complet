@@ -2,33 +2,93 @@
 
 .site-footer {
     @include section(4rem, $accent, $borderGrey);
-    @include footer(29rem, 1, 3, 3rem, column, center);
+    .container {
+        @include container(29rem);
+        @include footerContainerLayOut(1, 3, 3rem);
+        .contacts {
+            @include footerContacts($size16);
+        }
+        .mentions {
+            @include footerMentions(column, space-between, $size12);
+        }
+        .socials {
+            @include footerSocials(22rem, center);
+        }
+    }
 }
 
 @media screen and (min-width: 36em) {
     .site-footer {
         @include section(4rem, $accent, $borderGrey);
-        @include footer(46rem, 1, 3, 6rem, row, center);
+        .container {
+            @include container(46rem);
+            @include footerContainerLayOut(1, 3, 4rem);
+            .contacts {
+                @include footerContacts($size18);
+            }
+            .mentions {
+                @include footerMentions(row, center, $size14);
+            }
+            .socials {
+                @include footerSocials(22rem, center);
+            }
+        }
     }
 }
 
 @media screen and (min-width: 49em) {
     .site-footer {
         @include section(4rem, $accent, $borderGrey);
-        @include footer(65rem, 3, 1, 3rem, column, center);
+        .container {
+            @include container(65rem);
+            @include footerContainerLayOut(3, 1, 3rem);
+            .contacts {
+                @include footerContacts($size16);
+            }
+            .mentions {
+                @include footerMentions(column, space-between, $size12);
+            }
+            .socials {
+                @include footerSocials(18rem, center);
+            }
+        }
     }
 }
 
 @media screen and (min-width: 62em) {
     .site-footer {
         @include section(4rem, $accent, $borderGrey);
-        @include footer(89rem, 3, 1, 3rem, column, start);
+        .container {
+            @include container(89rem);
+            @include footerContainerLayOut(3, 1, 3rem);
+            .contacts {
+                @include footerContacts($size18);
+            }
+            .mentions {
+                @include footerMentions(column, space-between, $size14);
+            }
+            .socials {
+                @include footerSocials(22rem, start);
+            }
+        }
     }
 }
 
 @media screen and (min-width: 75em) {
     .site-footer {
         @include section(4rem, $accent, $borderGrey);
-        @include footer(127.6rem, 3, 1, 12rem, row, start);
+        .container {
+            @include container(127.6rem);
+            @include footerContainerLayOut(3, 1, 12rem);
+            .contacts {
+                @include footerContacts($size20);
+            }
+            .mentions {
+                @include footerMentions(row, space-between, $size16);
+            }
+            .socials {
+                @include footerSocials(22rem, start);
+            }
+        }
     }
 }

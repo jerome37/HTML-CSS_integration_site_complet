@@ -1,11 +1,12 @@
+<?php $page="Formation"; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.min.css">
-        <title>DWWM2021-3 - Formation HTML/CSS</title>
+        <title><?php if (isset($page)) {echo $page.' - ';} ?>DWWM2021-3</title>
     </head>
 
     <body>
@@ -13,9 +14,8 @@
 
         <main class="formation">
             <section class="formation-hero">
-                <div class="container">
-                    <h1 class="formation-title">Module HTML / CSS</h1>
-                </div>
+                <img src="img/formation_1.jpg" srcset="img/formation_1@2x.jpg 2x" class="formation-hero" alt="" >
+                <h1 class="formation-title">Module HTML / CSS</h1>
             </section>
 
             <section class="formation-desc">

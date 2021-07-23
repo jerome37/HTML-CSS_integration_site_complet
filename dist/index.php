@@ -1,13 +1,13 @@
+<?php $page="Accueil"; ?>
 <!DOCTYPE html>
 <html lang="fr">
-    
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.min.css">
         <link rel="stylesheet" href="css/style.min.css">
-        <title>DWWM2021-3 - Accueil</title>
+        <title><?php if (isset($page)) {echo $page.' - ';} ?>DWWM2021-3</title>
     </head>
 
     <body>
@@ -16,6 +16,7 @@
 
         <main class="site-main">
             <section class="site-hero">
+                <img src="img/image_hero.jpg" srcset="img/image_hero@2x.jpg 2x" class="background-hero" alt="">
                 <div class="container">
                     <div class="site-desc">
                         <p class="desc">Bienvenue sur le site de la promotion DWWM2021-3</p>
@@ -84,6 +85,7 @@
             </section>
 
             <section class="team">
+                <!-- class="team-section" -->
                 <div class="container">
                     <h2 class="section-title">Rencontrez les étudiants</h2>
                     <ul class="team-items" role="list">
@@ -112,6 +114,7 @@
             </section>
 
             <section class="formations">
+                <!-- class="formations-section" -->
                 <div class="container">
                     <h2 class="section-title">Les modules de la formation</h2>
                     <div class="articles">

@@ -1,11 +1,12 @@
+<?php $page="Blog"; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.min.css">
-        <title>DWWM2021-3 - Actualités</title>
+        <title><?php if (isset($page)) {echo $page.' - ';} ?>DWWM2021-3</title>
     </head>
 
     <body>
@@ -28,7 +29,7 @@
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …
                                 </p>
                             </div>
-                            <a href="" class="article-link">
+                            <a href="article.php" class="article-link">
                                 Lire la suite
                                 <img src="img/icone_fleche_droite.svg" alt="Consultez la suite de l'article" class="article-link-icone">
                             </a>
@@ -45,7 +46,7 @@
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …
                                 </p>
                             </div>
-                            <a href="" class="article-link">
+                            <a href="article.php" class="article-link">
                                 Lire la suite
                                 <img src="img/icone_fleche_droite.svg" alt="Consultez la suite de l'article" class="article-link-icone">
                             </a>
@@ -79,7 +80,7 @@
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …
                                 </p>
                             </div>
-                            <a href="" class="article-link">
+                            <a href="article.php" class="article-link">
                                 Lire la suite
                                 <img src="img/icone_fleche_droite.svg" alt="Consultez la suite de l'article" class="article-link-icone">
                             </a>
@@ -96,7 +97,7 @@
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …
                                 </p>
                             </div>
-                            <a href="" class="article-link">
+                            <a href="article.php" class="article-link">
                                 Lire la suite
                                 <img src="img/icone_fleche_droite.svg" alt="Consultez la suite de l'article" class="article-link-icone">
                             </a>

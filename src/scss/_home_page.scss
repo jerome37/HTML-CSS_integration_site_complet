@@ -1,85 +1,106 @@
 
+// -----------------------------------------------------------------------------
 // HERO
 
 
-.site-hero {
-    @include section(4rem, $white, none);
-    @include heroLayOut(66vh, url('../img/image_hero.jpg'));
-    .container {
-        @include container(29rem);
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        min-height: 47rem;
-        .site-desc {
-            @include heroContent(100%, center, $size40, $size20);
+.background-hero{
+    @include backgroundHero(62vh);
+}
+.container {
+    position: relative;
+    @include container(29rem);
+    .site-desc {
+        position: absolute;
+        @include siteDescLayOut(flex-end, 100%);
+        @include heroDescPosition(-130%, 20%, 0%, -0%);
+        .desc {
+            @include heroDesc($size36);
+        }
+        .cta-meet {
+            @include heroButton($size20);
         }
     }
 }
 
 @media screen and (min-width: 36em) {
-    .site-hero {
-        @include section(4rem, $white, none);
-        @include heroLayOut(66vh, url('../img/image_hero.jpg'));
-        .container {
-            @include container(46rem);
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            min-height: 47rem;
-            .site-desc {
-                @include heroContent(100%, center, $size40, $size24);
+    .background-hero{
+        @include backgroundHero(62vh);
+    }
+    .container {
+        position: relative;
+        @include container(46rem);
+        .site-desc {
+            position: absolute;
+            @include siteDescLayOut(flex-end, 100%);
+            @include heroDescPosition(-150%, 25%, 0%, -0%);
+            .desc {
+                @include heroDesc($size32);
+            }
+            .cta-meet {
+                @include heroButton($size20);
             }
         }
     }
 }
 
 @media screen and (min-width: 49em) {
-    .site-hero {
-        @include section(4rem, $white, none);
-        @include heroLayOut(66vh, url('../img/image_hero.jpg'));
-        .container {
-            @include container(65rem);
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            min-height: 47rem;
-            .site-desc {
-                @include heroContent(100%, flex-end, $size48, $size32);
+    .background-hero{
+        @include backgroundHero(62vh);
+    }
+    .container {
+        position: relative;
+        @include container(65rem);
+        .site-desc {
+            position: absolute;
+            @include siteDescLayOut(flex-end, 100%);
+            @include heroDescPosition(-145%, 25%, 0%, -0%);
+            .desc {
+                @include heroDesc($size46);
+            }
+            .cta-meet {
+                @include heroButton($size30);
             }
         }
     }
 }
 
 @media screen and (min-width: 62em) {
-    .site-hero {
-        @include section(4rem, $white, none);
-        @include heroLayOut(66vh, url('../img/image_hero.jpg'));
-        .container {
-            @include container(65rem);
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            min-height: 47rem;
-            .site-desc {
-                @include heroContent(100%, flex-end, $size48, $size40);
+    .background-hero{
+        @include backgroundHero(62vh);
+    }
+    .container {
+        position: relative;
+        @include container(89rem);
+        .site-desc {
+            position: absolute;
+            @include siteDescLayOut(flex-end, 75%);
+            @include heroDescPosition(-150%, 30%, 100%, -66%);
+            .desc {
+                @include heroDesc($size48);
+            }
+            .cta-meet {
+                @include heroButton($size32);
             }
         }
     }
 }
 
 @media screen and (min-width: 75em) {
-    .site-hero {
-        @include section(12rem, $white, none);
-        @include heroLayOut(62vh, url('../img/image_hero.jpg'));
-        .container {
-            @include container(127.6rem);
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            min-height: 47rem;
-            .site-desc {
-                @include heroContent(75%, flex-end, $size72, $size40);
+    .background-hero{
+        @include backgroundHero(62vh);
+    }
+    .container {
+        position: relative;
+        @include container(127.6rem);
+        .site-desc {
+            position: absolute;
+            @include siteDescLayOut(flex-end, 75%);
+            @include heroDescPosition(-150%, 15%, 100%, -66%);
+            .desc {
+                @include heroDesc($size72);
+            }
+            .cta-meet {
+                @include heroButton($size40);
             }
         }
     }
@@ -87,9 +108,7 @@
 
 
 // -------------------------------------------------------------------------------
-
 // BLOG
-
 
 .last-news {
     @include section(4rem, $white, $white);
@@ -101,7 +120,7 @@
         .articles {
             @include articlesGrid(3, 1, 3.2rem, 0rem);
             .article {
-                @include articleLayOut(3, 1, 2rem, auto, 67rem, $size16);
+                @include articleLayOut(3, 1, 2rem, auto, 67.5rem, $size16);
                 @include boxShadow();
                 .article-img {
                     @include articleImage(26rem);
@@ -109,7 +128,7 @@
                 .article-content {
                     @include articleContent(flex-start, 1.5rem);
                     .article-date {
-                        @include articleDate(1rem);
+                        @include articleDate(1rem, $size12);
                     }
                     .article-title {
                         @include itemTitle($size20, $textColor, 1rem);
@@ -145,7 +164,7 @@
                     .article-content {
                         @include articleContent(flex-start, 1.5rem);
                         .article-date {
-                            @include articleDate(1.6rem);
+                            @include articleDate(1.6rem, $size14);
                         }
                         .article-title {
                             @include itemTitle($size24, $textColor, 1rem);
@@ -174,7 +193,7 @@
             .articles {
                 @include articlesGrid(3, 1, 3.2rem, 0rem);
                 .article {
-                    @include articleLayOut(3, 1, 2.4rem, auto, 64rem, $size20);
+                    @include articleLayOut(3, 1, 2.4rem, auto, 63rem, $size20);
                     @include boxShadow();
                     .article-img {
                         @include articleImage(26rem);
@@ -182,7 +201,7 @@
                     .article-content {
                         @include articleContent(flex-start, 1.5rem);
                         .article-date {
-                            @include articleDate(1.6rem);
+                            @include articleDate(1.6rem, $size14);
                         }
                         .article-title {
                             @include itemTitle($size24, $textColor, 1.6rem);
@@ -211,7 +230,7 @@
             .articles {
                 @include articlesGrid(1, 3, 4rem, 3.2rem);
                 .article {
-                    @include articleLayOut(3, 1, 2.4rem, auto, 88rem, $size20);
+                    @include articleLayOut(3, 1, 2.4rem, auto, 87.7rem, $size20);
                     @include boxShadow();
                     .article-img {
                         @include articleImage(26rem);
@@ -219,7 +238,7 @@
                     .article-content {
                         @include articleContent(flex-start, 1.5rem);
                         .article-date {
-                            @include articleDate(1.6rem);
+                            @include articleDate(1.6rem, $size14);
                         }
                         .article-title {
                             @include itemTitle($size24, $textColor, 1.6rem);
@@ -257,7 +276,7 @@
                     .article-content {
                         @include articleContent(flex-start, 1.5rem);
                         .article-date {
-                            @include articleDate(1.6rem);
+                            @include articleDate(1.6rem, $size16);
                         }
                         .article-title {
                             @include itemTitle($size24, $textColor, 1.6rem);
@@ -275,11 +294,9 @@
     }
 }
 
+
 // ------------------------------------------------------------------------------------------
-
 // TEAM
-
-
 
 .team {
     @include section(4rem, $accent, $borderGrey);
@@ -416,9 +433,7 @@
 
 
 // ---------------------------------------------------------------------
-
 // FORMATIONS
-
 
 .formations {
     @include section(4rem, $white, $white);

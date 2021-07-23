@@ -2,33 +2,87 @@
 .site-header {
     position: relative;
     @include section(2.2rem, $accent, $accent);
-    @include headerToggle(29rem, $size24, $size16, 29rem, .5rem);
+    .container {
+        position: static;
+        @include container(29rem);
+        @include headerContainerLayOut();
+        .site-logo {
+            @include siteTitle($size24);
+        }
+        .site-menu {
+            @include headerMenuToggle(29rem, $size14, .5rem, .5rem);
+        }
+    }
 }
 
 @media screen and (min-width: 36em) {
     .site-header {
+        position: relative;
         @include section(2.2rem, $accent, $accent);
-        @include headerToggle(46rem, $size32, $size20, 46rem, 1rem);
+        .container {
+            position: static;
+            @include container(46rem);
+            @include headerContainerLayOut();
+            .site-logo {
+                @include siteTitle($size32);
+            }
+            .site-menu {
+                @include headerMenuToggle(46rem, $size16, 1rem, 1rem);
+            }
+        }
     }
 }
 
 @media screen and (min-width: 49em) {
     .site-header {
+        position: relative;
         @include section(2.2rem, $accent, $accent);
-        @include headerToggle(65rem, $size40, $size20, 65rem, 1rem);
+        .container {
+            position: static;
+            @include container(65rem);
+            @include headerContainerLayOut();
+            .site-logo {
+                @include siteTitle($size40);
+            }
+            .site-menu {
+                @include headerMenuToggle(65rem, $size20, 1.5rem, 1rem);
+            }
+        }
     }
 }
 
 @media screen and (min-width: 62em) {
     .site-header {
+        position: relative;
         @include section(2.2rem, $accent, $accent);
-        @include header(89rem, $size40, $size16, 1rem);
+        .container {
+            position: static;
+            @include container(89rem);
+            @include headerContainerLayOut();
+            .site-logo {
+                @include siteTitle($size40);
+            }
+            .site-menu {
+                @include headerMenu($size16, 1rem, 1rem);
+            }
+        }
     }
 }
 
 @media screen and (min-width: 75em) {
     .site-header {
+        position: relative;
         @include section(2.2rem, $accent, $accent);
-        @include header(127.6rem, $size48, $size20, 2rem);
+        .container {
+            position: static;
+            @include container(127.6rem);
+            @include headerContainerLayOut();
+            .site-logo {
+                @include siteTitle($size48);
+            }
+            .site-menu {
+                @include headerMenu($size20, 2rem, 1rem);
+            }
+        }
     }
 }

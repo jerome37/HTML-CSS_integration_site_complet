@@ -1,11 +1,12 @@
+<?php $page="Contact"; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.min.css">
-        <title>DWWM2021-3 - Contacts</title>
+        <title><?php if (isset($page)) {echo $page.' - ';} ?>DWWM2021-3</title>
     </head>
 
     <body>
@@ -15,7 +16,7 @@
             <section class="contact-section">
                 <div class="container">
                     <h1 class="form-title">Nous contacter</h1>
-                    <div class="form">
+                    <form class="contact-form">
                         <div class="form-content">
                             <div class="form-item">
                                 <label for="name" class="input-title">Votre nom</label>
@@ -31,11 +32,11 @@
                             </div>
                         </div>
                         <div class="form-button">
-                            <button class="submit-btn" aria-label="Envoyer votre message">Envoyer 
+                            <button type ="submit" class="submit-btn " aria-label="Envoyer votre message">Envoyer 
                             <img src="img/icone_fleche_droite.svg" alt="Consultez la suite de l'article" class="button-icone">
-                        </button>
-                    </div>
-                    </div>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>

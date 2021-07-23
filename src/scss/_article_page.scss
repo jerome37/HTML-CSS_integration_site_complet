@@ -15,7 +15,7 @@
                     @include sectionTitle($size24, $textColor);
                 }
                 .article-date {
-                    @include articleDate(1.6rem);
+                    @include articleDate(1.6rem, $size12);
                 }
                 .bloc-text {
                     @include textBloc(100%, $montserrat, $size16, $regular);
@@ -42,7 +42,7 @@
                         @include sectionTitle($size32, $textColor);
                     }
                     .article-date {
-                        @include articleDate(2rem);
+                        @include articleDate(2rem, $size14);
                     }
                     .bloc-text {
                         @include textBloc(100%, $montserrat, $size16, $regular);
@@ -70,7 +70,7 @@
                         @include sectionTitle($size32, $textColor);
                     }
                     .article-date {
-                        @include articleDate(3rem);
+                        @include articleDate(3rem, $size14);
                     }
                     .bloc-text {
                         @include textBloc(100%, $montserrat, $size16, $regular);
@@ -98,7 +98,7 @@
                         @include sectionTitle($size40, $textColor);
                     }
                     .article-date {
-                        @include articleDate(3rem);
+                        @include articleDate(3rem, $size14);
                     }
                     .bloc-text {
                         @include textBloc(100%, $montserrat, $size20, $regular);
@@ -126,7 +126,7 @@
                         @include sectionTitle($size48, $textColor);
                     }
                     .article-date {
-                        @include articleDate(4rem);
+                        @include articleDate(4rem, $size16);
                     }
                     .bloc-text {
                         @include textBloc(100%, $montserrat, $size20, $regular);

@@ -1,15 +1,10 @@
 
 .formation-hero {
-    @include section(4rem, $white, $borderGrey);
-    @include heroLayOut(30vh, url('../img/formation_1.jpg'));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .container {
-        @include container(29rem);
-        .formation-title {
-            @include sectionTitle($size24, $white);
-        }
+    @include heroFormationLayOut(20rem);
+    .formation-title {
+        position: absolute;
+        top: 50%;
+        @include sectionTitle($size20, $white);
     }
 }
 
@@ -19,23 +14,18 @@
         @include container(29rem);
         @include flexContainer();
         .formation-text {
-            @include textBloc(100%, $raleway, $size20, $semiBold);
+            @include textBloc(100%, $raleway, $size16, $semiBold);
         }
     }
 }
 
 @media screen and (min-width: 36rem) {
     .formation-hero {
-        @include section(4rem, $white, $borderGrey);
-        @include heroLayOut(30vh, url('../img/formation_1.jpg'));
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .container {
-            @include container(46rem);
-            .formation-title {
-                @include sectionTitle($size32, $white);
-            }
+        @include heroFormationLayOut(25rem);
+        .formation-title {
+            position: absolute;
+            top: 50%;
+            @include sectionTitle($size24, $white);
         }
     }
     
@@ -53,16 +43,11 @@
 
 @media screen and (min-width: 49rem) {
     .formation-hero {
-        @include section(4rem, $white, $borderGrey);
-        @include heroLayOut(40vh, url('../img/formation_1.jpg'));
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .container {
-            @include container(65rem);
-            .formation-title {
-                @include sectionTitle($size40, $white);
-            }
+        @include heroFormationLayOut(30rem);
+        .formation-title {
+            position: absolute;
+            top: 50%;
+            @include sectionTitle($size32, $white);
         }
     }
     
@@ -80,16 +65,11 @@
 
 @media screen and (min-width: 62rem) {
     .formation-hero {
-        @include section(4rem, $white, $borderGrey);
-        @include heroLayOut(40vh, url('../img/formation_1.jpg'));
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .container {
-            @include container(89rem);
-            .formation-title {
-                @include sectionTitle($size48, $white);
-            }
+        @include heroFormationLayOut(35rem);
+        .formation-title {
+            position: absolute;
+            top: 50%;
+            @include sectionTitle($size40, $white);
         }
     }
     
@@ -107,16 +87,11 @@
 
 @media screen and (min-width: 75rem){
     .formation-hero {
-        @include section(4rem, $white, $borderGrey);
-        @include heroLayOut(40vh, url('../img/formation_1.jpg'));
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .container {
-            @include container(127.6rem);
-            .formation-title {
-                @include sectionTitle($size48, $white);
-            }
+        @include heroFormationLayOut(40rem);
+        .formation-title {
+            position: absolute;
+            top: 50%;
+            @include sectionTitle($size48, $white);
         }
     }
     

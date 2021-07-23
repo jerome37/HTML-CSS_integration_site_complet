@@ -11,7 +11,7 @@
         .form-title {
             @include sectionTitle($size40, $textColor);
         }
-        .form {
+        .contact-form {
             @include formLayOut(100%, 3, 1, 46rem);
             .form-item{
                 @include formItem($size20, $size16, 3);
@@ -36,7 +36,7 @@
             .form-title {
                 @include sectionTitle($size40, $textColor);
             }
-            .form {
+            .contact-form {
                 @include formLayOut(100%, 3, 1, 46rem);
                 .form-item{
                     @include formItem($size20, $size16, 3);
@@ -62,7 +62,7 @@
             .form-title {
                 @include sectionTitle($size40, $textColor);
             }
-            .form {
+            .contact-form {
                 @include formLayOut(100%, 2, 2, 46rem);
                 .form-item{
                     @include formItem($size20, $size20, 2/span 2);
@@ -88,7 +88,7 @@
             .form-title {
                 @include sectionTitle($size40, $textColor);
             }
-            .form {
+            .contact-form {
                 @include formLayOut(100%, 2, 2, 46rem);
                 .form-item{
                     @include formItem($size20, $size20, 2/span 2);
@@ -114,7 +114,7 @@
             .form-title {
                 @include sectionTitle($size48, $textColor);
             }
-            .form {
+            .contact-form {
                 @include formLayOut(82%, 2, 2, 46rem);
                 .form-item{
                     @include formItem($size20, $size20, 2/span 2);
