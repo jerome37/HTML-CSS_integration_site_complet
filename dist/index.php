@@ -85,27 +85,26 @@
             </section>
 
             <section class="team">
-                <!-- class="team-section" -->
                 <div class="container">
                     <h2 class="section-title">Rencontrez les étudiants</h2>
                     <ul class="team-items" role="list">
                         <li class="studient-item">
-                            <img src="img/etudiant_1.jpg" srcset="img/etudiant_1@2X.jpg 2x" alt="Portrait de la première étudiante" class="studient-img">
+                            <img src="img/etudiant_1.jpg" srcset="img/etudiant_1@2x.jpg 2x" alt="Portrait de la première étudiante" class="studient-img">
                             <h3 class="studient-name">Francine Auhi</h3>
                             <a href="studient.php" class="studient-link">En savoir plus</a>
                         </li>
                         <li class="studient-item">
-                            <img src="img/etudiant_2.jpg" srcset="img/etudiant_2@2X.jpg 2x" alt="Portrait du second étudiant" class="studient-img">
+                            <img src="img/etudiant_2.jpg" srcset="img/etudiant_2@2x.jpg 2x" alt="Portrait du second étudiant" class="studient-img">
                             <h3 class="studient-name">Ali Korn</h3>
                             <a href="studient.php" class="studient-link">En savoir plus</a>
                         </li>
                         <li class="studient-item">
-                            <img src="img/etudiant_3.jpg" srcset="img/etudiant_3@2X.jpg 2x" alt="Portrait du troisième étudiant" class="studient-img">
+                            <img src="img/etudiant_3.jpg" srcset="img/etudiant_3@2x.jpg 2x" alt="Portrait du troisième étudiant" class="studient-img">
                             <h3 class="studient-name">Jean Vascrit</h3>
                             <a href="studient.php" class="studient-link">En savoir plus</a>
                         </li>
                         <li class="studient-item">
-                            <img src="img/etudiant_4.jpg" srcset="img/etudiant_4@2X.jpg 2x" alt="Portrait de la quatrième étudiante" class="studient-img">
+                            <img src="img/etudiant_4.jpg" srcset="img/etudiant_4@2x.jpg 2x" alt="Portrait de la quatrième étudiante" class="studient-img">
                             <h3 class="studient-name">Lara Velle</h3>
                             <a href="studient.php" class="studient-link">En savoir plus</a>
                         </li>
@@ -114,7 +113,6 @@
             </section>
 
             <section class="formations">
-                <!-- class="formations-section" -->
                 <div class="container">
                     <h2 class="section-title">Les modules de la formation</h2>
                     <div class="articles">

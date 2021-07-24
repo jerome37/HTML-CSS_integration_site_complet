@@ -2,10 +2,9 @@
 .blog{
     @include section(4rem, $white, $white);
     .container {
-        // @include container($ctnrWidth1);
         @include flexContainer($ctnrWidth1, column);
         .section-title{
-            @include sectionTitle($size40, $textColor);
+            @include sectionTitle($size24, $textColor);
         }
         .articles {
             @include articlesGrid(6, 1, 3.2rem, 0rem);
@@ -47,10 +46,9 @@
     .blog{
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth2);
             @include flexContainer($ctnrWidth2, column);
             .section-title{
-                @include sectionTitle($size40, $textColor);
+                @include sectionTitle($size30, $textColor);
             }
             .articles {
                 @include articlesGrid(6, 1, 4rem, 0rem);
@@ -93,10 +91,9 @@
     .blog{
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth3);
             @include flexContainer($ctnrWidth3, column);
             .section-title{
-                @include sectionTitle($size40, $textColor);
+                @include sectionTitle($size36, $textColor);
             }
             .articles {
                 @include articlesGrid(6, 1, 4rem, 0rem);
@@ -139,7 +136,6 @@
     .blog{
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth4);
             @include flexContainer($ctnrWidth4, column);
             .section-title{
                 @include sectionTitle($size40, $textColor);
@@ -185,10 +181,9 @@
     .blog{
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth5);
             @include flexContainer($ctnrWidth5, column);
             .section-title{
-                @include sectionTitle($size40, $textColor);
+                @include sectionTitle($size48, $textColor);
             }
             .articles {
                 @include articlesGrid(2, 3, 4rem, 3.2rem);

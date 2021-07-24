@@ -14,7 +14,7 @@
         position: absolute;
         @include siteDescLayOut(flex-end, 100%, -60%, 0%);
         .desc {
-            @include heroDesc($size36);
+            @include heroDesc($size32);
         }
         .cta-meet {
             @include heroButton($size20);
@@ -124,10 +124,9 @@
 .last-news {
     @include section(4rem, $white, $white);
     .container {
-        // @include container($ctnrWidth1);
         @include flexContainer($ctnrWidth1, column);
         .section-title {
-            @include sectionTitle($size40, $textColor);
+            @include sectionTitle($size24, $textColor);
         }
         .articles {
             @include articlesGrid(3, 1, 3.2rem, 0rem);
@@ -164,10 +163,9 @@
     .last-news {
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth2);
             @include flexContainer($ctnrWidth2, column);
             .section-title {
-                @include sectionTitle($size40, $textColor);
+                @include sectionTitle($size30, $textColor);
             }
             .articles {
                 @include articlesGrid(3, 1, 3.2rem, 0rem);
@@ -205,10 +203,9 @@
     .last-news {
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth3);
             @include flexContainer($ctnrWidth3, column);
             .section-title {
-                @include sectionTitle($size40, $textColor);
+                @include sectionTitle($size36, $textColor);
             }
             .articles {
                 @include articlesGrid(3, 1, 3.2rem, 0rem);
@@ -246,10 +243,9 @@
     .last-news {
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth4);
             @include flexContainer($ctnrWidth4, column);
             .section-title {
-                @include sectionTitle($size48, $textColor);
+                @include sectionTitle($size40, $textColor);
             }
             .articles {
                 @include articlesGrid(1, 3, 4rem, 3.2rem);
@@ -288,7 +284,6 @@
     .last-news {
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth5);
             @include flexContainer($ctnrWidth5, column);
             .section-title {
                 @include sectionTitle($size48, $textColor);
@@ -332,10 +327,9 @@
 .team {
     @include section(4rem, $accent, $borderGrey);
     .container {
-        // @include container($ctnrWidth1);
         @include flexContainer($ctnrWidth1, column);
         .section-title {
-            @include sectionTitle($size40, $white);
+            @include sectionTitle($size24, $white);
         }
         .team-items {
             @include teamItems(4, 1, 0rem, 3.2rem);
@@ -362,10 +356,9 @@
     .team {
         @include section(4rem, $accent, $borderGrey);
         .container {
-            // @include container($ctnrWidth2);
             @include flexContainer($ctnrWidth2, column);
             .section-title {
-                @include sectionTitle($size40, $white);
+                @include sectionTitle($size30, $white);
             }
             .team-items {
                 @include teamItems(2, 2, 3.2rem, 1.7rem);
@@ -375,7 +368,7 @@
                         @include studientImage(22rem);
                     }
                     .studient-name{
-                        @include itemTitle($size24, $white, 0rem);
+                        @include itemTitle($size20, $white, 0rem);
                     }
                     .studient-link {
                         @include studientLink($white);
@@ -393,10 +386,9 @@
     .team {
         @include section(4rem, $accent, $borderGrey);
         .container {
-            // @include container($ctnrWidth3);
             @include flexContainer($ctnrWidth3, column);
             .section-title {
-                @include sectionTitle($size40, $white);
+                @include sectionTitle($size36, $white);
             }
             .team-items {
                 @include teamItems(2, 2, 3.2rem, 3.2rem);
@@ -424,10 +416,9 @@
     .team {
         @include section(4rem, $accent, $borderGrey);
         .container {
-            // @include container($ctnrWidth4);
             @include flexContainer($ctnrWidth4, column);
             .section-title {
-                @include sectionTitle($size48, $white);
+                @include sectionTitle($size40, $white);
             }
             .team-items {
                 @include teamItems(1, 4, 1.7rem, 0rem);
@@ -451,11 +442,10 @@
 // ------------------------------------------------------------------
 // BREAK POINT 4
 
-@media screen and (min-width: $breakPoint4) {
+@media screen and (min-width: $breakPoint4){
     .team {
         @include section(4rem, $accent, $borderGrey);
         .container {
-            // @include container($ctnrWidth5);
             @include flexContainer($ctnrWidth5, column);
             .section-title {
                 @include sectionTitle($size48, $white);
@@ -489,10 +479,9 @@
 .formations {
     @include section(4rem, $white, $white);
     .container {
-        // @include container($ctnrWidth1);
         @include flexContainer($ctnrWidth1, column);
         .section-title {
-            @include sectionTitle($size40, $textColor);
+            @include sectionTitle($size24, $textColor);
         }
         .articles {
             @include articlesGrid(2, 1, 3.2rem, 0rem);
@@ -526,10 +515,9 @@
     .formations {
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth2);
             @include flexContainer($ctnrWidth2, column);
             .section-title {
-                @include sectionTitle($size40, $textColor);
+                @include sectionTitle($size30, $textColor);
             }
             .articles {
                 @include articlesGrid(2, 1, 3.2rem, 0rem);
@@ -564,10 +552,9 @@
     .formations {
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth3);
             @include flexContainer($ctnrWidth3, column);
             .section-title {
-                @include sectionTitle($size40, $textColor);
+                @include sectionTitle($size36, $textColor);
             }
             .articles {
                 @include articlesGrid(2, 1, 3.2rem, 0rem);
@@ -602,7 +589,6 @@
     .formations {
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth4);
             @include flexContainer($ctnrWidth4, column);
             .section-title {
                 @include sectionTitle($size40, $textColor);
@@ -640,10 +626,9 @@
     .formations {
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth5);
             @include flexContainer($ctnrWidth5, column);
             .section-title {
-                @include sectionTitle($size40, $textColor);
+                @include sectionTitle($size48, $textColor);
             }
             .articles {
                 @include articlesGrid(1, 2, 0rem, 3.2rem);

@@ -4,7 +4,7 @@
     .container {
         @include flexContainer($ctnrWidth1, column);
         .section-title {
-            @include sectionTitle($size40, $textColor);
+            @include sectionTitle($size24, $textColor);
         }
         .section-desc{
             @include textBloc(100%, $raleway, $size20, $semiBold);
@@ -50,7 +50,7 @@
         .container {
             @include flexContainer($ctnrWidth2, column);
             .section-title {
-                @include sectionTitle($size40, $textColor);
+                @include sectionTitle($size30, $textColor);
             }
             .section-desc{
                 @include textBloc(66%, $raleway, $size20, $semiBold);
@@ -97,7 +97,7 @@
         .container {
             @include flexContainer($ctnrWidth3, column);
             .section-title {
-                @include sectionTitle($size40, $textColor);
+                @include sectionTitle($size36, $textColor);
             }
             .section-desc{
                 @include textBloc(66%, $raleway, $size20, $semiBold);
@@ -191,7 +191,7 @@
         .container {
             @include flexContainer($ctnrWidth5, column);
             .section-title {
-                @include sectionTitle($size40, $textColor);
+                @include sectionTitle($size48, $textColor);
             }
             .section-desc{
                 @include textBloc(66%, $raleway, $size24, $semiBold);

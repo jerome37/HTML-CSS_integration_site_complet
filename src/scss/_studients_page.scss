@@ -2,7 +2,6 @@
 .studients {
     @include section(4rem, $white, $white);
     .container {
-        // @include container($ctnrWidth1);
         @include flexContainer($ctnrWidth1, column);
         .section-title {
             @include sectionTitle($size24, $textColor);
@@ -37,10 +36,9 @@
     .studients {
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth2);
             @include flexContainer($ctnrWidth2, column);
             .section-title {
-                @include sectionTitle($size32, $textColor);
+                @include sectionTitle($size30, $textColor);
             }
             .team-items {
                 @include teamItems(8, 2, 1.7rem, 3.2rem);
@@ -50,7 +48,7 @@
                         @include studientImage(20rem);
                     }
                     .studient-name{
-                        @include itemTitle($size24, $textColor, 0rem);
+                        @include itemTitle($size20, $textColor, 0rem);
                     }
                     .studient-link {
                         @include studientLink($accent);
@@ -73,10 +71,9 @@
     .studients {
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth3);
             @include flexContainer($ctnrWidth3, column);
             .section-title {
-                @include sectionTitle($size40, $textColor);
+                @include sectionTitle($size36, $textColor);
             }
             .team-items {
                 @include teamItems(8, 2, 3.2rem, 3.2rem);
@@ -109,10 +106,9 @@
     .studients {
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth4);
             @include flexContainer($ctnrWidth4, column);
             .section-title {
-                @include sectionTitle($size48, $textColor);
+                @include sectionTitle($size40, $textColor);
             }
             .team-items {
                 @include teamItems(4, 4, 1.7rem, 1.7rem);
@@ -145,10 +141,9 @@
     .studients {
         @include section(4rem, $white, $white);
         .container {
-            // @include container($ctnrWidth5);
             @include flexContainer($ctnrWidth5, column);
             .section-title {
-                @include sectionTitle($size40, $textColor);
+                @include sectionTitle($size48, $textColor);
             }
             .team-items {
                 @include teamItems(4, 4, 3.2rem, 1.7rem);
