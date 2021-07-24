@@ -1,18 +1,18 @@
 
 // -----------------------------------------------------------------------------
-// HERO
+// -----------------------------------------------------------------------------
 
+// HERO
 
 .background-hero{
     @include backgroundHero(62vh);
 }
 .container {
     position: relative;
-    @include container(29rem);
+    @include flexContainer($ctnrWidth1, row);
     .site-desc {
         position: absolute;
-        @include siteDescLayOut(flex-end, 100%);
-        @include heroDescPosition(-130%, 20%, 0%, -0%);
+        @include siteDescLayOut(flex-end, 100%, -60%, 0%);
         .desc {
             @include heroDesc($size36);
         }
@@ -22,17 +22,19 @@
     }
 }
 
-@media screen and (min-width: 36em) {
+// ------------------------------------------------------------------
+// BREAK POINT 1
+
+@media screen and (min-width: $breakPoint1) {
     .background-hero{
         @include backgroundHero(62vh);
     }
     .container {
         position: relative;
-        @include container(46rem);
+        @include flexContainer($ctnrWidth2, row);
         .site-desc {
             position: absolute;
-            @include siteDescLayOut(flex-end, 100%);
-            @include heroDescPosition(-150%, 25%, 0%, -0%);
+            @include siteDescLayOut(flex-end, 100%, -70%, 0%);
             .desc {
                 @include heroDesc($size32);
             }
@@ -43,17 +45,19 @@
     }
 }
 
-@media screen and (min-width: 49em) {
+// ------------------------------------------------------------------
+// BREAK POINT 2
+
+@media screen and (min-width: $breakPoint2) {
     .background-hero{
         @include backgroundHero(62vh);
     }
     .container {
         position: relative;
-        @include container(65rem);
+        @include flexContainer($ctnrWidth3, row);
         .site-desc {
             position: absolute;
-            @include siteDescLayOut(flex-end, 100%);
-            @include heroDescPosition(-145%, 25%, 0%, -0%);
+            @include siteDescLayOut(flex-end, 100%, -70%, 0%);
             .desc {
                 @include heroDesc($size46);
             }
@@ -64,17 +68,19 @@
     }
 }
 
-@media screen and (min-width: 62em) {
+// ------------------------------------------------------------------
+// BREAK POINT 3
+
+@media screen and (min-width: $breakPoint3) {
     .background-hero{
         @include backgroundHero(62vh);
     }
     .container {
         position: relative;
-        @include container(89rem);
+        @include flexContainer($ctnrWidth4, row);
         .site-desc {
             position: absolute;
-            @include siteDescLayOut(flex-end, 75%);
-            @include heroDescPosition(-150%, 30%, 100%, -66%);
+            @include siteDescLayOut(flex-end, 75%, -70%, 30%);
             .desc {
                 @include heroDesc($size48);
             }
@@ -85,17 +91,19 @@
     }
 }
 
-@media screen and (min-width: 75em) {
+// ------------------------------------------------------------------
+// BREAK POINT 4
+
+@media screen and (min-width: $breakPoint4) {
     .background-hero{
         @include backgroundHero(62vh);
     }
     .container {
         position: relative;
-        @include container(127.6rem);
+        @include flexContainer($ctnrWidth5, row);
         .site-desc {
             position: absolute;
-            @include siteDescLayOut(flex-end, 75%);
-            @include heroDescPosition(-150%, 15%, 100%, -66%);
+            @include siteDescLayOut(flex-end, 75%, -89%, 34%);
             .desc {
                 @include heroDesc($size72);
             }
@@ -107,13 +115,17 @@
 }
 
 
-// -------------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
 // BLOG
 
 .last-news {
     @include section(4rem, $white, $white);
     .container {
-        @include container(29rem);
+        // @include container($ctnrWidth1);
+        @include flexContainer($ctnrWidth1, column);
         .section-title {
             @include sectionTitle($size40, $textColor);
         }
@@ -145,11 +157,15 @@
     }
 }
 
-@media screen and (min-width: 36em) {
+// ------------------------------------------------------------------
+// BREAK POINT 1
+
+@media screen and (min-width: $breakPoint1) {
     .last-news {
         @include section(4rem, $white, $white);
         .container {
-            @include container(46rem);
+            // @include container($ctnrWidth2);
+            @include flexContainer($ctnrWidth2, column);
             .section-title {
                 @include sectionTitle($size40, $textColor);
             }
@@ -182,11 +198,15 @@
     }
 }
 
-@media screen and (min-width: 49em) {
+// ------------------------------------------------------------------
+// BREAK POINT 2
+
+@media screen and (min-width: $breakPoint2) {
     .last-news {
         @include section(4rem, $white, $white);
         .container {
-            @include container(65rem);
+            // @include container($ctnrWidth3);
+            @include flexContainer($ctnrWidth3, column);
             .section-title {
                 @include sectionTitle($size40, $textColor);
             }
@@ -219,11 +239,15 @@
     }
 }
 
-@media screen and (min-width: 62em) {
+// ------------------------------------------------------------------
+// BREAK POINT 3
+
+@media screen and (min-width: $breakPoint3) {
     .last-news {
         @include section(4rem, $white, $white);
         .container {
-            @include container(89rem);
+            // @include container($ctnrWidth4);
+            @include flexContainer($ctnrWidth4, column);
             .section-title {
                 @include sectionTitle($size48, $textColor);
             }
@@ -257,11 +281,15 @@
     }
 }
 
-@media screen and (min-width: 75em) {
+// ------------------------------------------------------------------
+// BREAK POINT 4
+
+@media screen and (min-width: $breakPoint4) {
     .last-news {
         @include section(4rem, $white, $white);
         .container {
-            @include container(127.6rem);
+            // @include container($ctnrWidth5);
+            @include flexContainer($ctnrWidth5, column);
             .section-title {
                 @include sectionTitle($size48, $textColor);
             }
@@ -295,52 +323,29 @@
 }
 
 
-// ------------------------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
 // TEAM
 
 .team {
     @include section(4rem, $accent, $borderGrey);
     .container {
-        @include container(29rem);
-    }
-    .section-title {
-        @include sectionTitle($size40, $white);
-    }
-    .team-items {
-        @include teamItems(4, 1, 0rem, 3.2rem);
-        .studient-item {
-            @include studientItem(2rem);
-            .studient-img {
-                @include studientImage(20rem);
-            }
-            .studient-name{
-                @include itemTitle($size20, $white, 0rem);
-            }
-            .studient-link {
-                @include studientLink($white);
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 36em) {
-    .team {
-        @include section(4rem, $accent, $borderGrey);
-        .container {
-            @include container(46rem);
-        }
+        // @include container($ctnrWidth1);
+        @include flexContainer($ctnrWidth1, column);
         .section-title {
             @include sectionTitle($size40, $white);
         }
         .team-items {
-            @include teamItems(2, 2, 3.2rem, 1.7rem);
+            @include teamItems(4, 1, 0rem, 3.2rem);
             .studient-item {
                 @include studientItem(2rem);
                 .studient-img {
-                    @include studientImage(22rem);
+                    @include studientImage(20rem);
                 }
                 .studient-name{
-                    @include itemTitle($size24, $white, 0rem);
+                    @include itemTitle($size20, $white, 0rem);
                 }
                 .studient-link {
                     @include studientLink($white);
@@ -350,38 +355,77 @@
     }
 }
 
-@media screen and (min-width: 49em) {
+// ------------------------------------------------------------------
+// BREAK POINT 1
+
+@media screen and (min-width: $breakPoint1) {
     .team {
         @include section(4rem, $accent, $borderGrey);
         .container {
-            @include container(65rem);
-        }
-        .section-title {
-            @include sectionTitle($size40, $white);
-        }
-        .team-items {
-            @include teamItems(2, 2, 3.2rem, 3.2rem);
-            .studient-item {
-                @include studientItem(2rem);
-                .studient-img {
-                    @include studientImage(22rem);
-                }
-                .studient-name{
-                    @include itemTitle($size24, $white, 0rem);
-                }
-                .studient-link {
-                    @include studientLink($white);
+            // @include container($ctnrWidth2);
+            @include flexContainer($ctnrWidth2, column);
+            .section-title {
+                @include sectionTitle($size40, $white);
+            }
+            .team-items {
+                @include teamItems(2, 2, 3.2rem, 1.7rem);
+                .studient-item {
+                    @include studientItem(2rem);
+                    .studient-img {
+                        @include studientImage(22rem);
+                    }
+                    .studient-name{
+                        @include itemTitle($size24, $white, 0rem);
+                    }
+                    .studient-link {
+                        @include studientLink($white);
+                    }
                 }
             }
         }
     }
 }
 
-@media screen and (min-width: 62em) {
+// ------------------------------------------------------------------
+// BREAK POINT 2
+
+@media screen and (min-width: $breakPoint2) {
     .team {
         @include section(4rem, $accent, $borderGrey);
         .container {
-            @include container(89rem);
+            // @include container($ctnrWidth3);
+            @include flexContainer($ctnrWidth3, column);
+            .section-title {
+                @include sectionTitle($size40, $white);
+            }
+            .team-items {
+                @include teamItems(2, 2, 3.2rem, 3.2rem);
+                .studient-item {
+                    @include studientItem(2rem);
+                    .studient-img {
+                        @include studientImage(22rem);
+                    }
+                    .studient-name{
+                        @include itemTitle($size24, $white, 0rem);
+                    }
+                    .studient-link {
+                        @include studientLink($white);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ------------------------------------------------------------------
+// BREAK POINT 3
+
+@media screen and (min-width: $breakPoint3) {
+    .team {
+        @include section(4rem, $accent, $borderGrey);
+        .container {
+            // @include container($ctnrWidth4);
+            @include flexContainer($ctnrWidth4, column);
             .section-title {
                 @include sectionTitle($size48, $white);
             }
@@ -404,11 +448,15 @@
     }
 }
 
-@media screen and (min-width: 75em) {
+// ------------------------------------------------------------------
+// BREAK POINT 4
+
+@media screen and (min-width: $breakPoint4) {
     .team {
         @include section(4rem, $accent, $borderGrey);
         .container {
-            @include container(127.6rem);
+            // @include container($ctnrWidth5);
+            @include flexContainer($ctnrWidth5, column);
             .section-title {
                 @include sectionTitle($size48, $white);
             }
@@ -432,13 +480,17 @@
 }
 
 
-// ---------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
 // FORMATIONS
 
 .formations {
     @include section(4rem, $white, $white);
     .container {
-        @include container(29rem);
+        // @include container($ctnrWidth1);
+        @include flexContainer($ctnrWidth1, column);
         .section-title {
             @include sectionTitle($size40, $textColor);
         }
@@ -467,11 +519,15 @@
     }
 }
 
-@media screen and (min-width: 36rem) {
+// ------------------------------------------------------------------
+// BREAK POINT 1
+
+@media screen and (min-width: $breakPoint1) {
     .formations {
         @include section(4rem, $white, $white);
         .container {
-            @include container(46rem);
+            // @include container($ctnrWidth2);
+            @include flexContainer($ctnrWidth2, column);
             .section-title {
                 @include sectionTitle($size40, $textColor);
             }
@@ -501,11 +557,15 @@
     }
 }
 
-@media screen and (min-width: 49rem) {
+// ------------------------------------------------------------------
+// BREAK POINT 2
+
+@media screen and (min-width: $breakPoint2) {
     .formations {
         @include section(4rem, $white, $white);
         .container {
-            @include container(65rem);
+            // @include container($ctnrWidth3);
+            @include flexContainer($ctnrWidth3, column);
             .section-title {
                 @include sectionTitle($size40, $textColor);
             }
@@ -535,11 +595,15 @@
     }
 }
 
-@media screen and (min-width: 62rem) {
+// ------------------------------------------------------------------
+// BREAK POINT 3
+
+@media screen and (min-width: $breakPoint3) {
     .formations {
         @include section(4rem, $white, $white);
         .container {
-            @include container(89rem);
+            // @include container($ctnrWidth4);
+            @include flexContainer($ctnrWidth4, column);
             .section-title {
                 @include sectionTitle($size40, $textColor);
             }
@@ -569,11 +633,15 @@
     }
 }
 
-@media screen and (min-width: 75rem) {
+// ------------------------------------------------------------------
+// BREAK POINT 4
+
+@media screen and (min-width: $breakPoint4) {
     .formations {
         @include section(4rem, $white, $white);
         .container {
-            @include container(127.6rem);
+            // @include container($ctnrWidth5);
+            @include flexContainer($ctnrWidth5, column);
             .section-title {
                 @include sectionTitle($size40, $textColor);
             }

@@ -2,8 +2,7 @@
 .formations-section {
     @include section(4rem, $white, $white);
     .container {
-        @include container(29rem);
-        @include flexContainer();
+        @include flexContainer($ctnrWidth1, column);
         .section-title {
             @include sectionTitle($size40, $textColor);
         }
@@ -39,12 +38,17 @@
     }
 }
 
-@media screen and (min-width: 36rem) {
+
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 1
+
+@media screen and (min-width: $breakPoint1) {
     .formations-section {
         @include section(4rem, $white, $white);
         .container {
-            @include container(46rem);
-            @include flexContainer();
+            @include flexContainer($ctnrWidth2, column);
             .section-title {
                 @include sectionTitle($size40, $textColor);
             }
@@ -81,12 +85,17 @@
     }
 }
 
-@media screen and (min-width: 49rem) {
+
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 2
+
+@media screen and (min-width: $breakPoint2) {
     .formations-section {
         @include section(4rem, $white, $white);
         .container {
-            @include container(65rem);
-            @include flexContainer();
+            @include flexContainer($ctnrWidth3, column);
             .section-title {
                 @include sectionTitle($size40, $textColor);
             }
@@ -123,12 +132,17 @@
     }
 }
 
-@media screen and (min-width: 62rem) {
+
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 3
+
+@media screen and (min-width: $breakPoint3) {
     .formations-section {
         @include section(4rem, $white, $white);
         .container {
-            @include container(89rem);
-            @include flexContainer();
+            @include flexContainer($ctnrWidth4, column);
             .section-title {
                 @include sectionTitle($size40, $textColor);
             }
@@ -165,12 +179,17 @@
     }
 }
 
-@media screen and (min-width: 75rem) {
+
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 4
+
+@media screen and (min-width: $breakPoint4) {
     .formations-section {
         @include section(4rem, $white, $white);
         .container {
-            @include container(127.6rem);
-            @include flexContainer();
+            @include flexContainer($ctnrWidth5, column);
             .section-title {
                 @include sectionTitle($size40, $textColor);
             }

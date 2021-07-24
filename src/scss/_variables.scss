@@ -1,8 +1,9 @@
 
-// --------------------------
-// ROOTS
+// ---------------------------------------------
+// ---------------------------------------------
 
 // COLORS
+
 $white: #fff;
 $accent: #FD7E37;
 $textColor: #331100;
@@ -12,7 +13,10 @@ $formGrey: #33110080;
 $borderGrey: #707070;
 $fadeGrey: #00000080;
 
-// --------------------------
+
+// ---------------------------------------------
+// ---------------------------------------------
+
 // TYPO
 
 // FONT FAMILIES
@@ -20,6 +24,8 @@ $montserrat: 'Montserrat', sans-serif;
 $raleway: 'raleway', sans-serif;
 
 // FONT SIZES
+// Certaines tailles de font eont été rajoutées par rapport à la
+// maquette pou rles beoins du responsive
 $size12: 1.2rem;
 $size14: 1.4rem;
 $size16: 1.6rem;
@@ -39,3 +45,22 @@ $regular: 400;
 $medium: 500;
 $semiBold: 600;
 $bold: 700;
+
+
+// ---------------------------------------------
+// ---------------------------------------------
+
+// LAY OUT
+
+// BREAK POINTS
+$breakPoint1: 36rem;
+$breakPoint2: 49rem;
+$breakPoint3: 62rem;
+$breakPoint4: 75rem;
+
+// CONTAINER WIDTH
+$ctnrWidth1: 29rem;
+$ctnrWidth2: 46rem;
+$ctnrWidth3: 65rem;
+$ctnrWidth4: 89rem;
+$ctnrWidth5: 128rem;

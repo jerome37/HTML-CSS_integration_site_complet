@@ -2,51 +2,15 @@
 .blog{
     @include section(4rem, $white, $white);
     .container {
-        @include container(29rem);
-    }
-    .section-title{
-        @include sectionTitle($size40, $textColor);
-    }
-    .articles {
-        @include articlesGrid(6, 1, 3.2rem, 0rem);
-        .article {
-            @include articleLayOut(3, 1, 2rem, auto, 67.5rem, $size16);
-            @include boxShadow();
-            .article-img {
-                @include articleImage(26rem);
-            }
-            .article-content {
-                @include articleContent(flex-start, 1.5rem);
-                .article-date {
-                    @include articleDate(1rem, $size12);
-                }
-                .article-title {
-                    @include itemTitle($size20, $textColor, 1rem);
-                }
-                .bloc-text {
-                    @include textBloc(100%, $montserrat, $size16, $regular);
-                }
-            }
-            .article-link {
-                @include articleLink(1.6rem, 3.2rem);
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 36em) {
-    .blog{
-        @include section(4rem, $white, $white);
-        .container {
-            @include container(46rem);
-        }
+        // @include container($ctnrWidth1);
+        @include flexContainer($ctnrWidth1, column);
         .section-title{
             @include sectionTitle($size40, $textColor);
         }
         .articles {
-            @include articlesGrid(6, 1, 4rem, 0rem);
+            @include articlesGrid(6, 1, 3.2rem, 0rem);
             .article {
-                @include articleLayOut(3, 1, 2.4rem, auto, 68.5rem, $size16);
+                @include articleLayOut(3, 1, 2rem, auto, 67.5rem, $size16);
                 @include boxShadow();
                 .article-img {
                     @include articleImage(26rem);
@@ -54,129 +18,205 @@
                 .article-content {
                     @include articleContent(flex-start, 1.5rem);
                     .article-date {
-                        @include articleDate(1.6rem, $size14);
+                        @include articleDate(1rem, $size12);
                     }
                     .article-title {
-                        @include itemTitle($size24, $textColor, 1rem);
+                        @include itemTitle($size20, $textColor, 1rem);
                     }
                     .bloc-text {
-                        @include textBloc(100%, $montserrat, $size20, $regular);
+                        @include textBloc(100%, $montserrat, $size16, $regular);
                     }
                 }
                 .article-link {
-                    @include articleLink(2.4rem, 4.8rem);
+                    @include articleLink(1.6rem, 3.2rem);
                 }
+            }
+        }
+        .list-buttons {
+            @include swipButtons();
+        }
+    }
+}
+
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 1
+
+@media screen and (min-width: $breakPoint1) {
+    .blog{
+        @include section(4rem, $white, $white);
+        .container {
+            // @include container($ctnrWidth2);
+            @include flexContainer($ctnrWidth2, column);
+            .section-title{
+                @include sectionTitle($size40, $textColor);
+            }
+            .articles {
+                @include articlesGrid(6, 1, 4rem, 0rem);
+                .article {
+                    @include articleLayOut(3, 1, 2.4rem, auto, 68.5rem, $size16);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
+                    }
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-date {
+                            @include articleDate(1.6rem, $size14);
+                        }
+                        .article-title {
+                            @include itemTitle($size24, $textColor, 1rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
+                    }
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
+                    }
+                }
+            }
+            .list-buttons {
+                @include swipButtons();
             }
         }
     }
 }
 
-@media screen and (min-width: 49em) {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 2
+
+@media screen and (min-width: $breakPoint2) {
     .blog{
         @include section(4rem, $white, $white);
         .container {
-            @include container(65rem);
-        }
-        .section-title{
-            @include sectionTitle($size40, $textColor);
-        }
-        .articles {
-            @include articlesGrid(6, 1, 4rem, 0rem);
-            .article {
-                @include articleLayOut(3, 1, 2.4rem, auto, 63rem, $size20);
-                @include boxShadow();
-                .article-img {
-                    @include articleImage(26rem);
-                }
-                .article-content {
-                    @include articleContent(flex-start, 1.5rem);
-                    .article-date {
-                        @include articleDate(1.6rem, $size14);
+            // @include container($ctnrWidth3);
+            @include flexContainer($ctnrWidth3, column);
+            .section-title{
+                @include sectionTitle($size40, $textColor);
+            }
+            .articles {
+                @include articlesGrid(6, 1, 4rem, 0rem);
+                .article {
+                    @include articleLayOut(3, 1, 2.4rem, auto, 63rem, $size20);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
                     }
-                    .article-title {
-                        @include itemTitle($size24, $textColor, 1.6rem);
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-date {
+                            @include articleDate(1.6rem, $size14);
+                        }
+                        .article-title {
+                            @include itemTitle($size24, $textColor, 1.6rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
                     }
-                    .bloc-text {
-                        @include textBloc(100%, $montserrat, $size20, $regular);
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
                     }
                 }
-                .article-link {
-                    @include articleLink(2.4rem, 4.8rem);
-                }
+            }
+            .list-buttons {
+                @include swipButtons();
             }
         }
     }
 }
 
-@media screen and (min-width: 62em) {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 3
+
+@media screen and (min-width: $breakPoint3) {
     .blog{
         @include section(4rem, $white, $white);
         .container {
-            @include container(89rem);
-        }
-        .section-title{
-            @include sectionTitle($size40, $textColor);
-        }
-        .articles {
-            @include articlesGrid(3, 2, 4rem, 3.2rem);
-            .article {
-                @include articleLayOut(3, 1, 2.4rem, auto, 69rem, $size20);
-                @include boxShadow();
-                .article-img {
-                    @include articleImage(26rem);
-                }
-                .article-content {
-                    @include articleContent(flex-start, 1.5rem);
-                    .article-date {
-                        @include articleDate(1.6rem, $size14);
+            // @include container($ctnrWidth4);
+            @include flexContainer($ctnrWidth4, column);
+            .section-title{
+                @include sectionTitle($size40, $textColor);
+            }
+            .articles {
+                @include articlesGrid(3, 2, 4rem, 3.2rem);
+                .article {
+                    @include articleLayOut(3, 1, 2.4rem, auto, 69rem, $size20);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
                     }
-                    .article-title {
-                        @include itemTitle($size24, $textColor, 1.6rem);
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-date {
+                            @include articleDate(1.6rem, $size14);
+                        }
+                        .article-title {
+                            @include itemTitle($size24, $textColor, 1.6rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
                     }
-                    .bloc-text {
-                        @include textBloc(100%, $montserrat, $size20, $regular);
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
                     }
                 }
-                .article-link {
-                    @include articleLink(2.4rem, 4.8rem);
-                }
+            }
+            .list-buttons {
+                @include swipButtons();
             }
         }
     }
 }
 
-@media screen and (min-width: 75em) {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 4
+
+@media screen and (min-width: $breakPoint4) {
     .blog{
         @include section(4rem, $white, $white);
         .container {
-            @include container(127.6rem);
-        }
-        .section-title{
-            @include sectionTitle($size40, $textColor);
-        }
-        .articles {
-            @include articlesGrid(2, 3, 4rem, 3.2rem);
-            .article {
-                @include articleLayOut(3, 1, 2.4rem, auto, 69rem, $size20);
-                @include boxShadow();
-                .article-img {
-                    @include articleImage(26rem);
-                }
-                .article-content {
-                    @include articleContent(flex-start, 1.5rem);
-                    .article-date {
-                        @include articleDate(1.6rem, $size16);
+            // @include container($ctnrWidth5);
+            @include flexContainer($ctnrWidth5, column);
+            .section-title{
+                @include sectionTitle($size40, $textColor);
+            }
+            .articles {
+                @include articlesGrid(2, 3, 4rem, 3.2rem);
+                .article {
+                    @include articleLayOut(3, 1, 2.4rem, auto, 69rem, $size20);
+                    @include boxShadow();
+                    .article-img {
+                        @include articleImage(26rem);
                     }
-                    .article-title {
-                        @include itemTitle($size24, $textColor, 1.6rem);
+                    .article-content {
+                        @include articleContent(flex-start, 1.5rem);
+                        .article-date {
+                            @include articleDate(1.6rem, $size16);
+                        }
+                        .article-title {
+                            @include itemTitle($size24, $textColor, 1.6rem);
+                        }
+                        .bloc-text {
+                            @include textBloc(100%, $montserrat, $size20, $regular);
+                        }
                     }
-                    .bloc-text {
-                        @include textBloc(100%, $montserrat, $size20, $regular);
+                    .article-link {
+                        @include articleLink(2.4rem, 4.8rem);
                     }
                 }
-                .article-link {
-                    @include articleLink(2.4rem, 4.8rem);
-                }
+            }
+            .list-buttons {
+                @include swipButtons();
             }
         }
     }

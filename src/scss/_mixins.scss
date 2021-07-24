@@ -1,9 +1,46 @@
 
+// Bien que le nom des paramètres reprennent pour la grande majorité celui de la règle CSS dont
+// ils doivent préciser la valeur, voici néanmoins un lexique les résumant et les définissant.
+// Certaines valeurs font l'objet d'une variable définie dans le dossier "_variables.scss".
+
+//LEXIQUE DES PARAMETRES :
+// - $bgColor : agit sur la couleur de fond d'un élément (cf. variables)
+// - $borderColor : définit la couleur de la bordure d'un élément (cf. variables)
+// - $color : définit la couleur de la police d'un élément
+// - $flexDirection: agit sur l'orientation en ligne ou en colonne des éléments 
+// - $fontFamily : permet de définir la famille typographique de l'élément (cf. variables)
+// - $fontSize : agit sur la taille de la police de l'élément (cf. variables)
+// - $fontWeight: définit la graisse de la police de l'élément (cf. variables)
+// - $gap : agit de façon globale sur l'interval entre deux sections d'une grille "grid"
+// - $gapColumn : définit la taille de l'interval des colonnes d'une grille
+// - $gapRow : définit la taille de l'interval des lignes d'une grille
+// - $height : agit sur la hauteur d'un élément
+// - $justify : permet de préciser la valeur de la règle CSS "justify-content" d'un élément
+// - $margin : agit sur le margin global d'un élément
+// - $nbColumns : agit sur le nombre de colonnes d'un élément "grid"
+// - $nbRows : agit sur le nombre de lignes d'un élément "grid"
+// - $padding : agit sur le padding d'un élément
+// - $paddingX : pour appliquer une taille commune aux règles CSS  "padding-left" et 
+//   "padding-right"
+// - $paddingY : pour appliquer une taille commune aux règles CSS  "padding-top" et 
+//   "padding-bottom"
+// - $span : définit la zone d'extension d'un élément dans une grille "grid"
+// - $translateX: permet de définir la position en abscisse d'un élément
+// - $translateY: permet de définir la position en abscisse d'un élément
+// - $width : agit sur la largeur d'un élément
+
+
 
 // -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
 // LAY OUT
 
 // SECTIONS
+// Le mixin général "section" possède 3 arguments pour agir sur le padding, selon les
+// varuiations proposées par la maquette et les breakpoints du responsive; ainsi que sur
+// la couleur de fond et des bordures, également selon les propositions de la maquette. De
+// cette façon, il peut être réutiliser pour toutes les sections du HTML.
 @mixin section($padding, $bgColor, $borderColor) {
     padding-top: $padding;
     padding-bottom: $padding;
@@ -12,34 +49,55 @@
 }
 
 // CONTAINERS
-@mixin container($width) {
+// Le mixin général "container" structure le lay out général des éléments d'une section. 
+// Il s'applique à la grande majorité des sections du site. Il dispose d'un argument "$width" 
+// pour pouvoir l'adapter selon les breakpoints du responsive, et flex direction pour répondre 
+// au besoin de certaines sections.
+@mixin flexContainer($width, $flexDirection){
     max-width: $width;
     margin-left: auto;
     margin-right: auto;
-}
-
-@mixin flexContainer(){
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@mixin gridContainer($nbRows, $gap){
-    display: grid;
-    grid-template-rows: repeat($nbRows, auto);
-    row-gap: $gap;
-}
-
-@mixin headerContainerLayOut(){
-    display: flex;
+    flex-direction: $flexDirection;
     justify-content: space-between;
     align-items: center;
 }
 
+// @mixin container($width) {
+//     max-width: $width;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+// Le mixin "gridContainer" permet quant à lui de structurer les élemnts d'une section en grille.
+// Il est utilisé pour configurer les éléments de la page "Les étudiants". Ses paramètres permet-
+// tent de modifier la largeur du container, ainsi que le nombre de colonnes, de lignes et la tail-
+// le de l'interval entre chacune dans la grille.
+@mixin gridContainer($width, $nbRows, $nbrColumns, $gap){
+    max-width: $width;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat($nbrColumns, auto);
+    grid-template-rows: repeat($nbRows, auto);
+    gap: $gap;
+}
+
+
 
 // -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
+// TYPO
+
+// Cette section concerne tous les mixins se rapportant à la mise en forme des différents
+// éléments typographiques que sont le stitres et le bloc texte réemployé dans les différentes
+// zones textes du site.
+
 
 // TITLES
+// Equivalent à la balise "h1" du HTML appliquée au titre-logo du header et à l'intitulé des 
+// formations.
 @mixin siteTitle($fontSize){
     font-family: $raleway;
     font-size: $fontSize;
@@ -48,6 +106,7 @@
     color: $white;
 }
 
+// Equivalent à la balise "h2" du HTML appliquée aux titres des sections.
 @mixin sectionTitle($fontSize, $color) {
     font-family: $raleway;
     font-size: $fontSize;
@@ -58,6 +117,8 @@
     padding-bottom: 4rem;
 }
 
+// Equivalent à la balise "h3" du HTML appliquée aux titres des articles et
+// aux noms des étudiants.
 @mixin itemTitle($fontSize, $color, $margin) {
     font-family: 'raleway', sans-serif;
     font-size: $fontSize;
@@ -69,28 +130,93 @@
 
 
 // TEXT BLOCS
-
-@mixin textBloc($width, $fontFamily, $textSize, $textWeight) {
+// S'appliquant à tous les blocs textes du site, il prend plusieurs arguments relatifs à
+// la largeur du bloc ($width) mais surtout à la typographie ($fontFamily, $fontSize et 
+// $fontWeight).
+@mixin textBloc($width, $fontFamily, $fontSize, $fontWeight) {
     font-family: $fontFamily;
-    font-size: $textSize;
-    font-weight: $textWeight;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
     line-height: 1.5;
     color: $textColor;
     width: $width;
 }
 
 
+
 // -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
 // EFFECTS
 
+// Cette courte section concerne les effets appliqués aux éléments du site.
+
+// Un seul effet est appliqué sur tout le site : l'effet d'ombrage externe des articles
+// de la page d'accueil, des formations et du blog.
 @mixin boxShadow(){
     box-shadow: 0 0 2.8rem $shadowGrey;
 }
 
 
-// -----------------------------------------------------------------------------
-// SWIP BUTTONS
 
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
+// COMPONENTS
+
+// Cette section concerne tous les petits éléments intéractifs qui composent les
+// différents éléments du site
+
+// Le mixin "toggleButtons" permet de définir les règles propres au bouton toggle qui
+// permet le déploiement du menu du site dans les premiers breakspoints du responsive.
+// Son unique argument permet simplement de jouer sur la taille de la police.
+@mixin toggleButton($fontSize){
+    display: flex;
+    padding: 0.25rem 1rem;
+    font-family: $montserrat;
+    font-size: $fontSize;
+    color: $accent;
+    background-color: $white;
+    border: 0;
+    transition: .1s;
+    &:hover,
+    &:active {
+        outline: 2px solid $white;
+        background-color: $accent;
+        color: $white;
+    }
+    &:focus {
+        outline: 2px solid $white;
+        background-color: $accent;
+        color: $white;
+    }
+}
+
+// Le mixin "heroButton" permet de configurer le bouton call-to-action intégrer dans le
+// desc du hero. Son seul est unique paramètre permet d'influer sur la taille de la police en 
+// fonction des breakpoints du responsive.
+@mixin heroButton($fontSize){
+    font-family: $montserrat;
+    font-size: $fontSize;
+    font-weight: $semiBold;
+    color: $white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1;
+    padding: 2rem 3rem;
+    background-color: $accent;
+    border: 1px solid $borderGrey;
+    transition: .2s;
+    &:hover,
+    &:focus {
+        color: $accent;
+        background-color: $white;
+    }
+}
+
+// Le mixin "swipButtons" regroupe toutes les règles formelles qui s'appliquent aux
+// boutons du bandeau déroulant des pages "Les étudiants" et "les formations" (fictifs, en
+// l'occurrence).
 @mixin swipButtons(){
     display: flex;
     padding-top: 8rem;
@@ -118,12 +244,61 @@
     }
 }
 
+// Le mixin "formButtons" définit les règles qui s'appliquent au bouton d'envoi du formulaire
+// de contact, avec deux paramètres qui permettent de modifier la taille de police selon les 
+// breakpoints du responsive.
+@mixin formButton($fontSize){
+    display: flex;
+    justify-content: flex-end;
+    .submit-btn{
+        display: flex;
+        padding: 1rem 2rem;
+        align-items: center;
+
+        font-family: $montserrat;
+        font-size: $fontSize;
+        line-height: 1.2;
+        background-color: $accent;
+        color: white;
+        border: 2px solid $accent;
+        border-radius: .4rem;
+        .button-icone {
+            width: 2rem;
+            height: 2rem;
+            margin-left: 2.1rem;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            offset: none;
+            outline: transparent;
+            border: 2px solid $accent;
+            background-color: $white;
+            color: $accent;
+            .button-icone {
+                filter: invert(37%) sepia(45%) saturate(3029%) hue-rotate(336deg) brightness(101%) contrast(98%);
+            }
+        }
+    }
+}
+
+
 
 // -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
 // HEADER
 
-// MENU
+// Cette section réunit les mixins qui s'appliquent au header du site, en particulier
+// au menu dont la mise en forme complexe est différente selon qu'il soit directement
+// déployé dans le header ou accessible via un bouton toggle, selon les breakpoints du
+// responsive.
 
+
+// MENU
+// Le mixin général "headerMenu" permet de configurer la mise en forme du menu lorsqu'il 
+// est directement accessible dans le header. on peut alors jouer sur la taille de la police
+// ainsi que sur le padding pour adapter l'organisation selon le responsive.
 @mixin headerMenu($fontSize, $paddingX, $paddingY){
     display: flex;
     align-items: center;
@@ -155,6 +330,9 @@
     }
 }
 
+// Le mixin particulier "menuLink" permet d'appliquer des règles spécifiques aux items
+// qui composent le menu du site. Si les arguments sont les mêmes que pour le mixin
+// précédent, la valeur de chacun est cependant différente.
 @mixin menuLink($fontSize, $paddingX, $paddingY){
     font-family: $montserrat;
     font-size: $fontSize;
@@ -175,45 +353,13 @@
 
 
 // MENU TOGGLE
+// Les mixins qui suivent permettent de configurer le CSS du menu lorsqu'il est accessible
+// via un bouton toggle (pour la mise en forme du bouton, cf. la section précédente COMPONENTS).
 
-@mixin toggleButton($fontSize){
-    display: flex;
-    padding: 0.25rem 1rem;
-    font-family: $montserrat;
-    font-size: $fontSize;
-    color: $accent;
-    background-color: $white;
-    border: 0;
-    transition: .1s;
-    &:hover,
-    &:active {
-        outline: 2px solid $white;
-        background-color: $accent;
-        color: $white;
-    }
-    &:focus {
-        outline: 2px solid $white;
-        background-color: $accent;
-        color: $white;
-    }
-}
-
-
-@mixin toggleMenuLayOut($fontSize){
-    display: flex;
-    flex-direction: column;
-    margin-left: -1px;
-    margin-right: -1px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    font-family: $montserrat;
-    font-size: $fontSize;
-    background-color: $accent;
-    transition: .5s;
-}
-
+// Le mixin général "headerMenuToggle" définit la mise en forme du menu toggle lorsqu'il est
+// caché (hidden) ou visible (not hidden). Très complexe, il incorpore des sous-mixins expliqués
+// après, pour permettre une configuration plus claire des ous-éléments qui le composent. Les
+// arguments qu'il accepte sont finalement ceux des sous-mixins.
 @mixin headerMenuToggle($width, $fontSize, $paddingX, $paddingY){
     display: flex;
     align-items: center;
@@ -243,6 +389,25 @@
     }
 }
 
+// Le mixin particulier "toggleMenuLayOut" permet de configurer les règles qui s'appliquent
+// à la balise "nav" du header, c'est-à-dire à l'ensemble du menu.
+@mixin toggleMenuLayOut($fontSize){
+    display: flex;
+    flex-direction: column;
+    margin-left: -1px;
+    margin-right: -1px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    font-family: $montserrat;
+    font-size: $fontSize;
+    background-color: $accent;
+    transition: .5s;
+}
+
+// Le mixin particulier "menuLinkToggle", à l'instar du mixin "menuLink" permet de configurer
+// l'organisation des items du menu.
 @mixin menuLinkToggle($width, $paddingX, $paddingY){
     width: $width;
     margin-left: auto;
@@ -268,10 +433,22 @@
 }
 
 
+
+// -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
-//HERO
+// MAIN
 
+// Cette grande section déclare les mixins relatifs à la mise en forme des différents
+// éléments du main : le hero, les articles de blog et des formations, les profils des
+// étudiants et le formulaire de contact.
+
+//HERO
+// Sont réunis ici les mixins qui s'appliquent au hero de la page d'accueil mais également
+// à celui qui introduit la présentation particulière de chaque formation.
+
+// Le mixin "backgroundHero" permet de mettre en forme l'image de fond du hero, en jouant
+// notamment sur la hauteur de l'élément en fonction des breakpoints du responsive.
 @mixin backgroundHero($height) {
     width: 100%;
     min-height: $height;
@@ -279,19 +456,11 @@
     object-position: center;
 }
 
-@mixin heroDescPosition($translate1, $translate2, $translate3, $translate4) {
-    z-index: 1;
-    transform: translateY($translate1) translateY($translate2) translateX($translate3) translateX($translate4);
-}
-
-@mixin heroContainerLayOut($justify, $align, $height){
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    min-height: 47rem;
-}
-
-@mixin siteDescLayOut($align, $width){
+// Le mixin particulier "heroDesc" permet d'agir sur les règles applicables à l'élément
+// qui compose le hero de la page d'accueil. Ses paramètres permettent de gérer l'alignement
+// du contenu, en particulier le bouton (cf. section précédente COMPONENTS), sa largeur (en %) 
+// et les coordonnées de sa position à commencer par l'ordonnées, puis l'abscisse (en %).
+@mixin siteDescLayOut($align, $width, $translateY, $translateX){
     display: flex;
     flex-direction: column;
     align-items: $align;
@@ -300,8 +469,13 @@
     height: auto;
     background-color: $fadeGrey;
     padding: 2.6rem;
+    z-index: 1;
+    transform: translateY($translateY) translateX($translateX);
 }
 
+// Le mixin "heroDesc" permet la mise en forme du texte du hero, en jouant notamment sur
+// la taille de police selon les breakpoints du responsive.
+// Il va de paire avec le mixin "heroButton" (cf. section précédente COMPONENTS).
 @mixin heroDesc($fontSize){
     font-family: $raleway;
     font-size: $fontSize;
@@ -311,25 +485,9 @@
     margin-bottom: 2rem;
 }
 
-@mixin heroButton($fontSize){
-    font-family: $montserrat;
-    font-size: $fontSize;
-    font-weight: $semiBold;
-    color: $white;
-    text-decoration: none;
-    text-align: center;
-    line-height: 1;
-    padding: 2rem 3rem;
-    background-color: $accent;
-    border: 1px solid $borderGrey;
-    transition: .2s;
-    &:hover,
-    &:focus {
-        color: $accent;
-        background-color: $white;
-    }
-}
-
+// Le mixin particulier "heroFormationLayOut" s'applique uniquement à l'en-tête de
+// présentation de chacun des formations, et dont seule la hauteur varie avec le
+// responsive.
 @mixin heroFormationLayOut($height) {
     position: relative;
     display: flex;
@@ -342,11 +500,15 @@
 }
 
 
-// -----------------------------------------------------------------------------
-// MAIN COMPONENTS
-
 // ARTICLES
+// Cette sous-section réunit le smixins relatifs à la mise en forme des articles du blog et
+// des formations. Les articles sont des éléments composits relativement complexes, dont l'
+// organisation peut changer d'une page à l'autre et selon le responsive. c'est pourquoi, leur
+// CSS est décomposé en plusieurs mixins permettant un meilleur contrôle de ces évolutions.
 
+// Le mixin général "articlesGrid" permet de structurer la grille de présentation de chaque article ou
+// formation en jouant sur les différentes règles du "grid" en fonction des breakpoints du 
+// responsive.
 @mixin articlesGrid($nbrRows, $nbrColumns, $gapRow, $gapColumn) {
     display: grid;
     grid-template-columns: repeat($nbrColumns, 1fr);
@@ -355,21 +517,23 @@
     column-gap: $gapColumn;
 }
 
-@mixin articleLayOut($nbRows, $nbColumns, $gap, $width, $height, $textSize) {
+// Le mixin général "articleLayOut" permet de mettre en forme chaque article grâce à de nombreux 
+// paramètres car sa forme change de façon assez complexe avec le responsive.
+@mixin articleLayOut($nbRows, $nbColumns, $gap, $width, $height, $fontSize) {
     display: grid;
     grid-template-rows: repeat($nbRows, auto);
     grid-template-columns: repeat($nbColumns, auto);
     gap: $gap;
-    
     max-width: $width;
     max-height: $height;
-
     font-family: $montserrat;
-    font-size: $textSize;
+    font-size: $fontSize;
     font-weight: $regular;
     border-radius: .4rem;
 }
 
+// Le mixin particulier "articleImage" permet de configurer l'image qui compose chaque article,
+// en particulier sa hauteur qui varie avec le responsive.
 @mixin articleImage($height){
     width: 100%;
     height: $height;
@@ -377,6 +541,9 @@
     object-position: center;
 }
 
+// Le mixin "articleDate" définit les règles de mise en forme de la date qui peut être présente
+// ou non selon qu'il s'agisse d'un article de blog ou de présentation des formations. C'est la
+// raison pour laquelle il fait l'objet d'un mixin isolé.
 @mixin articleDate($margin, $fontSize) {
     display: flex;
     align-items: center;
@@ -388,6 +555,8 @@
     }
 }
 
+// Le mixin "articleContent" permet de mettre en forme le corps de l'article composé du titre et
+// du texte (pour les titres et le texte, cf. section précédente TYPO).
 @mixin articleContent($align, $margin) {
     display: flex;
     flex-direction: column;
@@ -396,12 +565,15 @@
     margin-left: $margin;
 }
 
-@mixin articleLink($sizeText, $height) {
+// Enfin, le mixin "articleLink" permet de définir les règles de mise en forme du lien présent
+// à la fin de chaque article, avec ses effets. Encore une fois, les paramètres sont ceux des 
+// règles qui changent avec le responsive.
+@mixin articleLink($fontSize, $height) {
     display: flex;
     justify-content: center;
     align-items: center;
     max-height: $height;
-    font-size: $sizeText;
+    font-size: $fontSize;
     font-weight: $semiBold;
 
     color: $white;
@@ -431,15 +603,33 @@
 
 
 // TEAM ITEMS
+// Cette sous-section intègre le smixins en lien avec la mise en forme des éléments de présentation 
+// des étudiants.
 
+// Le mixin "profilLayOut" permet de configurer la grille de présentation des profils étudiants
+// dans la page "Les étudiants". Ses paramètres acceptent les valeurs qui permettent de faire
+// évoluer cette configuration selon les breakpoints du responsive.
+@mixin profilLayOut($nbColumns, $nbRows, $gapRow, $gapColumn) {
+    display: grid;
+    grid-template-columns: repeat($nbColumns, auto);
+    grid-template-rows: repeat($nbRows, auto);
+    row-gap: $gapRow;
+    column-gap: $gapColumn;
+}
+
+// Il en est de même pour le mixin "teamItems" qui configure quant à lui la présentation des items
+// dans la section "Team" de la page d'accueil.
 @mixin teamItems($nbrRows, $nbrColumns, $gapColumn, $gapRow){
     display: grid;
     grid-template-columns: repeat($nbrColumns, 1fr);
     grid-template-rows: repeat($nbrRows, 1fr);
     column-gap: $gapColumn;
     row-gap: $gapRow;
+    width: 100%;
 }
 
+// Le mixin "studientItem" permet de mettre en forme l'item de présentation de chaque étudiant
+// en faisant varier le gap de la grille avec le responsive.
 @mixin studientItem($gap) {
     display: grid;
     grid-template-rows: repeat(3, auto);
@@ -452,9 +642,11 @@
     padding-bottom: .3rem;
 }
 
-@mixin studientImage($portraitWidth) {
-    width: $portraitWidth;
-    height: $portraitWidth;
+// Le mixin "studientImage" définit la mise ne forme de l'image du profil étudiant dont la
+// taille varie avec le responsive.
+@mixin studientImage($width) {
+    width: $width;
+    height: $width;
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
@@ -462,8 +654,10 @@
     margin-left: auto;
 }
 
-@mixin studientLink($colorLink) {
-    color: $colorLink;
+// Le mixin "studientLink" donfigure le lien qui renvoie au profil personnel de chaque étudiant.
+// Cette fois-ci c'est la couleur qui varie selon les pages et en fonction du responsive.
+@mixin studientLink($color) {
+    color: $color;
     border: 2px solid transparent;
     padding: .2rem 1rem;
     transition: .2s;
@@ -475,17 +669,15 @@
     }
 }
 
-@mixin profilLayOut($nbColumns, $nbRows, $gapRow, $gapColumn) {
-    display: grid;
-    grid-template-columns: repeat($nbColumns, auto);
-    grid-template-rows: repeat($nbRows, auto);
-    row-gap: $gapRow;
-    column-gap: $gapColumn;
-}
-
 
 // FORM
+// Cette sous-section réunit les mixins relatifs à la structure formelle du formulaire de
+// contact d ela page "Nous contacter". Comme la plupart des éléments généraux qui composent le
+// main de chaque page du site, il comprend plusieurs petits éléments qui font chacun l'objet d'
+// un mixin. Pour le bouton d'envoi, cf. section précédente COMPONENTS.
 
+// Le mixin "formLayOut" permet de mettre en place l'organisation générale du formulaire avec, en
+// paramètres, les valeurs évoluant selon le responsive.
 @mixin formLayOut($width, $nbrRows, $nbrColumns, $height){
     width: $width;
     .form-content {
@@ -501,12 +693,17 @@
     }
 }
 
-@mixin formItem($titleSize, $textSize, $span){
+// Le mixin "formItem" configure le rendu des items du formulaire à savoir les labels, les
+// inputs et le textarea (:nth-child(3)). Il prend un premier paramètre $fonSize qui permet d'
+// adapter la taille de police au responsive, ansi qu'un second qui détermine la place du textarea
+// dans la grille définie par le mixin précédent "formLayout", selon l'évolution de la structure de
+// la grille avec le responsive.
+@mixin formItem($fontSize, $span){
     display: flex;
     flex-direction: column;
-    .input-title {
+    .input-label {
         font-family: $montserrat;
-        font-size: $titleSize; 
+        font-size: $fontSize; 
         line-height: 1.5;
         color: $textColor;
         margin-bottom: 2rem;
@@ -515,7 +712,7 @@
         width: 100%;
 
         font-family: $montserrat;
-        font-size: $textSize; 
+        font-size: $fontSize; 
         font-weight: 400;
         color: $textColor;
 
@@ -544,52 +741,21 @@
     }
 }
 
-@mixin formButton($justify){
-    display: flex;
-    justify-content: $justify;
-    .submit-btn{
-        display: flex;
-        padding: 1rem 2rem;
-        align-items: center;
-
-        font-family: $montserrat;
-        font-size: $size24;
-        line-height: 1.2;
-        background-color: $accent;
-        color: white;
-        border: 2px solid $accent;
-        border-radius: .4rem;
-        .button-icone {
-            width: 2rem;
-            height: 2rem;
-            margin-left: 2.1rem;
-        }
-        &:hover,
-        &:focus,
-        &:active {
-            offset: none;
-            outline: transparent;
-            border: 2px solid $accent;
-            background-color: $white;
-            color: $accent;
-            .button-icone {
-                filter: invert(37%) sepia(45%) saturate(3029%) hue-rotate(336deg) brightness(101%) contrast(98%);
-            }
-        }
-    }
-}
 
 
 // -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
 // FOOTER
 
-@mixin footerContainerLayOut($nbrColumns, $nbrRows, $gap){
-    display: grid;
-    grid-template-columns: repeat($nbrColumns, auto);
-    grid-template-rows: repeat($nbrRows, auto);
-    gap: $gap;
-}
+// Cette dernière section regroupe les mixins relatifs à la mise en forme du footer du site.
+// Comm epour plusieurs des éléments généraux qui compose le site, le ffoter intègre plusieurs
+// sous-éléments qui font l'objet de mixins particuliers afin d'accroître le contrôle de la mise
+// en forme selon les évolutions induite par le responsive.
 
+// Le mixin "footerContacts" détermine les règles de mise en forme de la première partie du
+// footer réunissant les informations de contact, en jouant sur la taille de police selon les
+// breakpoints du responsive.
 @mixin footerContacts($fontSize){
     font-family: $montserrat;
     color: $white;
@@ -614,6 +780,9 @@
     }
 }
 
+// De la même manière, le mixin "footerMentions" définit les règles d'organisation 
+// ($flexDirection et $justify) et de présentation ($fontSize) des mentions légales et 
+// de la politique de confidentialité.
 @mixin footerMentions($flexDirection, $justify, $fontSize){
     display: flex;
     flex-direction: $flexDirection;
@@ -638,6 +807,10 @@
     }
 }
 
+
+// Enfin, le mixin "footerSocials" réunit les règles de mise en forme des icônes renvoyant
+// vers les réseaux sociaux en jouant sur la largeur de l'élément qui les englobe ($width) et 
+// sur leur façon de se répartir dans ce même élément ($justify).
 @mixin footerSocials($width, $justify){
     width: $width;
     justify-self: $justify;

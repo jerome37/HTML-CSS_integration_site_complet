@@ -11,15 +11,20 @@
 .formation-desc {
     @include section(4rem, $white, $white);
     .container {
-        @include container(29rem);
-        @include flexContainer();
+        @include flexContainer($ctnrWidth1, row);
         .formation-text {
             @include textBloc(100%, $raleway, $size16, $semiBold);
         }
     }
 }
 
-@media screen and (min-width: 36rem) {
+
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 1
+
+@media screen and (min-width: $breakPoint1) {
     .formation-hero {
         @include heroFormationLayOut(25rem);
         .formation-title {
@@ -32,8 +37,7 @@
     .formation-desc {
         @include section(4rem, $white, $white);
         .container {
-            @include container(46rem);
-            @include flexContainer();
+            @include flexContainer($ctnrWidth2, row);
             .formation-text {
                 @include textBloc(100%, $raleway, $size20, $semiBold);
             }
@@ -41,7 +45,13 @@
     }
 }
 
-@media screen and (min-width: 49rem) {
+
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 2
+
+@media screen and (min-width: $breakPoint2) {
     .formation-hero {
         @include heroFormationLayOut(30rem);
         .formation-title {
@@ -54,16 +64,21 @@
     .formation-desc {
         @include section(4rem, $white, $white);
         .container {
-            @include container(65rem);
-            @include flexContainer();
+            @include flexContainer(43rem, row);
             .formation-text {
-                @include textBloc(66%, $raleway, $size20, $semiBold);
+                @include textBloc(100%, $raleway, $size20, $semiBold);
             }
         }
     }
 }
 
-@media screen and (min-width: 62rem) {
+
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 3
+
+@media screen and (min-width: $breakPoint3) {
     .formation-hero {
         @include heroFormationLayOut(35rem);
         .formation-title {
@@ -76,16 +91,21 @@
     .formation-desc {
         @include section(4rem, $white, $white);
         .container {
-            @include container(65rem);
-            @include flexContainer();
+            @include flexContainer(59rem, row);
             .formation-text {
-                @include textBloc(66%, $raleway, $size24, $semiBold);
+                @include textBloc(100%, $raleway, $size24, $semiBold);
             }
         }
     }
 }
 
-@media screen and (min-width: 75rem){
+
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 4
+
+@media screen and (min-width: $breakPoint4){
     .formation-hero {
         @include heroFormationLayOut(40rem);
         .formation-title {
@@ -98,10 +118,9 @@
     .formation-desc {
         @include section(4rem, $white, $white);
         .container {
-            @include container(127.6rem);
-            @include flexContainer();
+            @include flexContainer(84rem, row);
             .formation-text {
-                @include textBloc(66%, $raleway, $size24, $semiBold);
+                @include textBloc(100%, $raleway, $size24, $semiBold);
             }
         }
     }

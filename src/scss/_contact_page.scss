@@ -2,128 +2,127 @@
 .contact-section {
     @include section(4rem, $white, $white);
     .container {
-        @include container(29rem);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 66rem;
+        @include flexContainer($ctnrWidth1, column);
+        height: 66rem;
         .form-title {
             @include sectionTitle($size40, $textColor);
         }
         .contact-form {
             @include formLayOut(100%, 3, 1, 46rem);
             .form-item{
-                @include formItem($size20, $size16, 3);
+                @include formItem($size16, 3);
             }
             .form-button {
-                @include formButton(center);
+                @include formButton($size16);
             }
         }
     }
 }
 
-@media screen and (min-width: 36rem) {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 1
+
+@media screen and (min-width: $breakPoint1) {
     .contact-section {
         @include section(4rem, $white, $white);
         .container {
-            @include container(46rem);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 66rem;
+            @include flexContainer($ctnrWidth2, column);
+            height: 66rem;
             .form-title {
                 @include sectionTitle($size40, $textColor);
             }
             .contact-form {
                 @include formLayOut(100%, 3, 1, 46rem);
                 .form-item{
-                    @include formItem($size20, $size16, 3);
+                    @include formItem($size16, 3);
                 }
                 .form-button {
-                    @include formButton(center);
+                    @include formButton($size16);
                 }
             }
         }
     }
 }
 
-@media screen and (min-width: 49rem) {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 2
+
+@media screen and (min-width: $breakPoint2) {
     .contact-section {
         @include section(4rem, $white, $white);
         .container {
-            @include container(65rem);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 66rem;
+            @include flexContainer($ctnrWidth3, column);
+            height: 66rem;
             .form-title {
                 @include sectionTitle($size40, $textColor);
             }
             .contact-form {
                 @include formLayOut(100%, 2, 2, 46rem);
                 .form-item{
-                    @include formItem($size20, $size20, 2/span 2);
+                    @include formItem($size18, 2/span 2);
                 }
                 .form-button {
-                    @include formButton(flex-end);
+                    @include formButton($size18);
                 }
             }
         }
     }
 }
 
-@media screen and (min-width: 62rem) {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 3
+
+@media screen and (min-width: $breakPoint3) {
     .contact-section {
         @include section(4rem, $white, $white);
         .container {
-            @include container(89rem);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 66rem;
+            @include flexContainer($ctnrWidth4, column);
+            height: 66rem;
             .form-title {
                 @include sectionTitle($size40, $textColor);
             }
             .contact-form {
                 @include formLayOut(100%, 2, 2, 46rem);
                 .form-item{
-                    @include formItem($size20, $size20, 2/span 2);
+                    @include formItem($size20, 2/span 2);
                 }
                 .form-button {
-                    @include formButton(flex-end);
+                    @include formButton($size20);
                 }
             }
         }
     }
 }
 
-@media screen and (min-width: 75rem){
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 4
+
+@media screen and (min-width: $breakPoint4){
     .contact-section {
         @include section(4rem, $white, $white);
         .container {
-            @include container(127.6rem);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 66rem;
+            @include flexContainer($ctnrWidth5, column);
+            height: 66rem;
             .form-title {
                 @include sectionTitle($size48, $textColor);
             }
             .contact-form {
                 @include formLayOut(82%, 2, 2, 46rem);
                 .form-item{
-                    @include formItem($size20, $size20, 2/span 2);
+                    @include formItem($size20, 2/span 2);
                 }
                 .form-button {
-                    @include formButton(flex-end);
+                    @include formButton($size24);
                 }
             }
         }
     }
-
 }

@@ -13,7 +13,7 @@
         <?php include('parts/header.php'); ?>
         
         <main class="article-main">
-            <section class="actualite">
+            <section class="actuality">
                 <div class="container">
                     <article class="article">
                         <img src="img/actualite_3.jpg" srcset="img/actualite_3@2x.jpg 2x" alt="Image d'illustration du troisième article" class="article-img">

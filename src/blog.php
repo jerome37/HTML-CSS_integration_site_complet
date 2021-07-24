@@ -120,6 +120,24 @@
                             </a>
                         </article>
                     </div>
+
+                    <ul class="list-buttons" role="list">
+                        <li class="button-item">
+                            <button type="button" class="swip-button" id="previous-btn" aria-label="Revenir à la slide précédente"><<</button>
+                        </li>
+                        <li class="button-item">
+                            <button type="button" class="swip-button" aria-label="Accéder à la première slide">1</button>
+                        </li>
+                        <li class="button-item">
+                            <button type="button" class="swip-button" aria-label="Accéder à la seconde slide">2</button>
+                        </li>
+                        <li class="button-item">
+                            <button type="button" class="swip-button" aria-label="Accéder à la troisième slide">3</button>
+                        </li>
+                        <li class="button-item">
+                            <button type="button" class="swip-button" id="next-btn" aria-label="Passer à la slide suivante">>></button>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </main>

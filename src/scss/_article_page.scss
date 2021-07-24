@@ -1,9 +1,8 @@
 
-.actualite {
+.actuality {
     @include section(4rem, $white, $white );
     .container {
-        @include container(29rem);
-        @include flexContainer();
+        @include flexContainer($ctnrWidth1, row);
         .article {
             @include articleLayOut(2, 1, 2rem, 100%, 200rem, $size20);
             .article-img {
@@ -25,12 +24,16 @@
     }    
 }
 
-@media screen and (min-width: 36rem) {
-    .actualite {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 1
+
+@media screen and (min-width: $breakPoint1) {
+    .actuality {
         @include section(4rem, $white, $white );
         .container {
-            @include container(46rem);
-            @include flexContainer();
+            @include flexContainer($ctnrWidth2, row);
             .article {
                 @include articleLayOut(2, 1, 3rem, 100%, 142rem, $size20);
                 .article-img {
@@ -53,14 +56,18 @@
     }
 }
 
-@media screen and (min-width: 49rem) {
-    .actualite {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 2
+
+@media screen and (min-width: $breakPoint2) {
+    .actuality {
         @include section(4rem, $white, $white );
         .container {
-            @include container(65rem);
-            @include flexContainer();
+            @include flexContainer(43rem, row);
             .article {
-                @include articleLayOut(2, 1, 4rem, 66%, 155rem, $size20);
+                @include articleLayOut(2, 1, 4rem, 100%, 155rem, $size20);
                 .article-img {
                     @include articleImage(34rem);
                 }
@@ -81,14 +88,18 @@
     }
 }
 
-@media screen and (min-width: 62rem) {
-    .actualite {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 3
+
+@media screen and (min-width: $breakPoint3) {
+    .actuality {
         @include section(4rem, $white, $white );
         .container {
-            @include container(89rem);
-            @include flexContainer();
+            @include flexContainer(59rem, row);
             .article {
-                @include articleLayOut(2, 1, 4rem, 66%, 180rem, $size20);
+                @include articleLayOut(2, 1, 4rem, 100%, 180rem, $size20);
                 .article-img {
                     @include articleImage(44rem);
                 }
@@ -109,14 +120,18 @@
     }
 }
 
-@media screen and (min-width: 75rem) {
-    .actualite {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 4
+
+@media screen and (min-width: $breakPoint4) {
+    .actuality {
         @include section(4rem, $white, $white );
         .container {
-            @include container(127.6rem);
-            @include flexContainer();
+            @include flexContainer(84rem, row);
             .article {
-                @include articleLayOut(2, 1, 4rem, 66%, 160rem, $size20);
+                @include articleLayOut(2, 1, 4rem, 100%, 160rem, $size20);
                 .article-img {
                     @include articleImage(54rem);
                 }

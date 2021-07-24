@@ -2,8 +2,7 @@
 .section-studient {
     @include section(4rem, $white, $white);
     .container {
-        @include container(29rem);
-        @include gridContainer(4, 2rem);
+        @include gridContainer($ctnrWidth1, 4, 1, 2rem);
         .studient-img {
             @include studientImage(22rem);
         }
@@ -32,12 +31,16 @@
     }
 }
 
-@media screen and (min-width: 36rem) {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 1
+
+@media screen and (min-width: $breakPoint1) {
     .section-studient {
         @include section(4rem, $white, $white);
         .container {
-            @include container(46rem);
-            @include gridContainer(4, 3rem);
+            @include gridContainer($ctnrWidth2, 4, 1, 3rem);
             .studient-img {
                 @include studientImage(32rem);
             }
@@ -67,12 +70,16 @@
     }
 }
 
-@media screen and (min-width: 49rem) {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 2
+
+@media screen and (min-width: $breakPoint2) {
     .section-studient {
         @include section(4rem, $white, $white);
         .container {
-            @include container(65rem);
-            @include gridContainer(4, 4rem);
+            @include gridContainer($ctnrWidth3, 4, 1, 4rem);
             .studient-img {
                 @include studientImage(32rem);
             }
@@ -102,12 +109,16 @@
     }
 }
 
-@media screen and (min-width: 62rem) {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 3
+
+@media screen and (min-width: $breakPoint3) {
     .section-studient {
         @include section(4rem, $white, $white);
         .container {
-            @include container(89rem);
-            @include gridContainer(4, 4rem);
+            @include gridContainer($ctnrWidth4, 4, 1, 4rem);
             .studient-img {
                 @include studientImage(32rem);
             }
@@ -137,12 +148,16 @@
     }
 }
 
-@media screen and (min-width: 75rem) {
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// BREAK POINT 4
+
+@media screen and (min-width: $breakPoint4) {
     .section-studient {
         @include section(4rem, $white, $white);
         .container {
-            @include container(127.6rem);
-            @include gridContainer(4, 4rem);
+            @include gridContainer($ctnrWidth5, 4, 1, 4rem);
             .studient-img {
                 @include studientImage(40.4rem);
             }
