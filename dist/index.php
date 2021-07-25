@@ -16,11 +16,11 @@
 
         <main class="site-main">
             <section class="site-hero">
-                <img src="img/image_hero.jpg" srcset="img/image_hero@2x.jpg 2x" class="background-hero" alt="">
+                <img src="img/image_hero.jpg" srcset="img/image_hero@2x.jpg 2x" class="background-hero" alt="photo d'un ordinateur sur une table de travail">
                 <div class="container">
                     <div class="site-desc">
-                        <p class="desc">Bienvenue sur le site de la promotion DWWM2021-3</p>
-                        <a href="studients.php" class="cta-meet">Rencontrez nos étudiants</a>
+                        <h1 class="site-title">Bienvenue sur le site de la promotion DWWM2021-3</h1>
+                        <a href="students.php" class="desc-button">Rencontrez nos étudiants</a>
                     </div>
                 </div>
             </section>
@@ -91,22 +91,22 @@
                         <li class="studient-item">
                             <img src="img/etudiant_1.jpg" srcset="img/etudiant_1@2x.jpg 2x" alt="Portrait de la première étudiante" class="studient-img">
                             <h3 class="studient-name">Francine Auhi</h3>
-                            <a href="studient.php" class="studient-link">En savoir plus</a>
+                            <a href="student_profil.php" class="studient-link">En savoir plus</a>
                         </li>
                         <li class="studient-item">
                             <img src="img/etudiant_2.jpg" srcset="img/etudiant_2@2x.jpg 2x" alt="Portrait du second étudiant" class="studient-img">
                             <h3 class="studient-name">Ali Korn</h3>
-                            <a href="studient.php" class="studient-link">En savoir plus</a>
+                            <a href="student_profil.php" class="studient-link">En savoir plus</a>
                         </li>
                         <li class="studient-item">
                             <img src="img/etudiant_3.jpg" srcset="img/etudiant_3@2x.jpg 2x" alt="Portrait du troisième étudiant" class="studient-img">
                             <h3 class="studient-name">Jean Vascrit</h3>
-                            <a href="studient.php" class="studient-link">En savoir plus</a>
+                            <a href="student_profil.php" class="studient-link">En savoir plus</a>
                         </li>
                         <li class="studient-item">
                             <img src="img/etudiant_4.jpg" srcset="img/etudiant_4@2x.jpg 2x" alt="Portrait de la quatrième étudiante" class="studient-img">
                             <h3 class="studient-name">Lara Velle</h3>
-                            <a href="studient.php" class="studient-link">En savoir plus</a>
+                            <a href="student_profil.php" class="studient-link">En savoir plus</a>
                         </li>
                     </ul>
                 </div>
@@ -124,7 +124,7 @@
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …
                                 </p>
                             </div>
-                            <a href="formation.php" class="article-link">
+                            <a href="formation_desc.php" class="article-link">
                                 Lire la suite
                                 <img src="img/icone_fleche_droite.svg" alt="Consultez la suite de l'article" class="article-link-icone">
                             </a>
@@ -137,7 +137,7 @@
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …
                                 </p>   
                             </div>
-                            <a href="formation.php" class="article-link">
+                            <a href="formation_desc.php" class="article-link">
                                 Lire la suite
                                 <img src="img/icone_fleche_droite.svg" alt="Consultez la suite de l'article" class="article-link-icone">
                             </a>

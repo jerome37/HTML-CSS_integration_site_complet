@@ -10,7 +10,7 @@
     <body>
         <header class="site-header">
             <div class="container">
-                <h1 class="site-logo">DWWM</h1>
+                <div class="site-logo">DWWM</div>
                 <nav class="site-menu">
                     <button class="toggle-menu" aria-expanded="false" aria-controls="menu">Menu</button>
                     <ul id="menu" class="menu" role="list" hidden>
@@ -21,7 +21,7 @@
                             <a href="formations.php" class="menu-link <?php if(isset($page) && $page==="Formations"){echo "active";} ?>">la formation</a>
                         </li>
                         <li class="menu-items">
-                            <a href="studients.php" class="menu-link <?php if(isset($page) && $page==="Promotion"){echo "active";} ?>">les étudiants</a>
+                            <a href="students.php" class="menu-link <?php if(isset($page) && $page==="Promotion"){echo "active";} ?>">les étudiants</a>
                         </li>
                         <li class="menu-items">
                             <a href="blog.php" class="menu-link <?php if(isset($page) && $page==="Blog"){echo "active";} ?>">actualités</a>

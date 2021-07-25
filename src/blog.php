@@ -15,7 +15,7 @@
         <main class="blog-section">
             <section class="blog">
                 <div class="container">
-                    <h2 class="section-title">Les actualités</h2>
+                    <h1 class="section-title">Les actualités</h1>
                     <div class="articles">
                         <article class="article">
                             <img src="img/actualite_1.jpg" srcset="img/actualite_1@2x.jpg 2x" alt="Image d'illustration du premier article" class="article-img">
@@ -24,7 +24,7 @@
                                     <img src="img/icone_date.svg" alt="Icone d'un calendrier" class="date-icone">
                                     <time datetime="2020-02-12" class="date">12/02/2020</time>
                                 </div>
-                                <h3 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h1>
+                                <h2 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h2>
                                 <p class="bloc-text">
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …
                                 </p>
@@ -41,7 +41,7 @@
                                     <img src="img/icone_date.svg" alt="Icone d'un calendrier" class="date-icone">
                                     <time datetime="2020-02-12" class="date">12/02/2020</time>
                                 </div>
-                                <h3 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h1>
+                                <h2 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h2>
                                 <p class="bloc-text">
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …
                                 </p>
@@ -58,7 +58,7 @@
                                     <img src="img/icone_date.svg" alt="Icone d'un calendrier" class="date-icone">
                                     <time datetime="2020-02-12" class="date">12/02/2020</time>
                                 </div>
-                                <h3 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h1>
+                                <h2 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h2>
                                 <p class="bloc-text">
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …
                                 </p>
@@ -75,7 +75,7 @@
                                     <img src="img/icone_date.svg" alt="Icone d'un calendrier" class="date-icone">
                                     <time datetime="2020-02-12" class="date">12/02/2020</time>
                                 </div>
-                                <h3 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h1>
+                                <h2 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h2>
                                 <p class="bloc-text">
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …
                                 </p>
@@ -92,7 +92,7 @@
                                     <img src="img/icone_date.svg" alt="Icone d'un calendrier" class="date-icone">
                                     <time datetime="2020-02-12" class="date">12/02/2020</time>
                                 </div>
-                                <h3 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h1>
+                                <h2 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h2>
                                 <p class="bloc-text">
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …
                                 </p>
@@ -109,7 +109,7 @@
                                     <img src="img/icone_date.svg" alt="Icone d'un calendrier" class="date-icone">
                                     <time datetime="2020-02-12" class="date">12/02/2020</time>
                                 </div>
-                                <h3 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h1>
+                                <h2 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h2>
                                 <p class="bloc-text">
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …
                                 </p>

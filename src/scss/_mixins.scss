@@ -4,6 +4,7 @@
 // Certaines valeurs font l'objet d'une variable définie dans le dossier "_variables.scss".
 
 //LEXIQUE DES PARAMETRES :
+// - $align : permet de modifier la valeur d'alignement des composants d'un élément
 // - $bgColor : agit sur la couleur de fond d'un élément (cf. variables)
 // - $borderColor : définit la couleur de la bordure d'un élément (cf. variables)
 // - $color : définit la couleur de la police d'un élément
@@ -63,17 +64,11 @@
     align-items: center;
 }
 
-// @mixin container($width) {
-//     max-width: $width;
-//     margin-left: auto;
-//     margin-right: auto;
-// }
-
 // Le mixin "gridContainer" permet quant à lui de structurer les élemnts d'une section en grille.
 // Il est utilisé pour configurer les éléments de la page "Les étudiants". Ses paramètres permet-
 // tent de modifier la largeur du container, ainsi que le nombre de colonnes, de lignes et la tail-
 // le de l'interval entre chacune dans la grille.
-@mixin gridContainer($width, $nbRows, $nbrColumns, $gap){
+@mixin gridContainer($width, $nbRows, $nbrColumns, $gap, $justify, $align){
     max-width: $width;
     margin-left: auto;
     margin-right: auto;
@@ -81,6 +76,8 @@
     grid-template-columns: repeat($nbrColumns, auto);
     grid-template-rows: repeat($nbRows, auto);
     gap: $gap;
+    justify-content: $justify;
+    text-align: $align;
 }
 
 

@@ -14,7 +14,7 @@
 
         <main class="formation">
             <section class="formation-hero">
-                <img src="img/formation_1.jpg" srcset="img/formation_1@2x.jpg 2x" class="formation-hero" alt="" >
+                <img src="img/formation_1.jpg" srcset="img/formation_1@2x.jpg 2x" class="formation-hero" alt="Photo de lignes de code sur un écran" >
                 <h1 class="formation-title">Module HTML / CSS</h1>
             </section>
 

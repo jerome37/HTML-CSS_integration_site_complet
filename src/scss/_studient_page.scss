@@ -2,7 +2,7 @@
 .section-studient {
     @include section(4rem, $white, $white);
     .container {
-        @include gridContainer($ctnrWidth1, 4, 1, 2rem);
+        @include gridContainer($ctnrWidth1, 4, 1, 2rem, flex-start, start);
         .studient-img {
             @include studientImage(22rem);
         }
@@ -40,7 +40,7 @@
     .section-studient {
         @include section(4rem, $white, $white);
         .container {
-            @include gridContainer($ctnrWidth2, 4, 1, 3rem);
+            @include gridContainer($ctnrWidth2, 4, 1, 3rem, flex-start, start);
             .studient-img {
                 @include studientImage(32rem);
             }
@@ -79,7 +79,7 @@
     .section-studient {
         @include section(4rem, $white, $white);
         .container {
-            @include gridContainer($ctnrWidth3, 4, 1, 4rem);
+            @include gridContainer($ctnrWidth3, 4, 1, 4rem, flex-start, start);
             .studient-img {
                 @include studientImage(32rem);
             }
@@ -118,7 +118,7 @@
     .section-studient {
         @include section(4rem, $white, $white);
         .container {
-            @include gridContainer($ctnrWidth4, 4, 1, 4rem);
+            @include gridContainer($ctnrWidth4, 4, 1, 4rem, flex-start, start);
             .studient-img {
                 @include studientImage(32rem);
             }
@@ -157,7 +157,7 @@
     .section-studient {
         @include section(4rem, $white, $white);
         .container {
-            @include gridContainer($ctnrWidth5, 4, 1, 4rem);
+            @include gridContainer($ctnrWidth5, 4, 1, 4rem, flex-start, start);
             .studient-img {
                 @include studientImage(40.4rem);
             }

@@ -18,7 +18,7 @@
                     <article class="article">
                         <img src="img/actualite_3.jpg" srcset="img/actualite_3@2x.jpg 2x" alt="Image d'illustration du troisième article" class="article-img">
                         <div class="article-content">
-                            <h3 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h1>
+                            <h1 class="article-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h1>
                             <div class="article-date">
                                 <img src="img/icone_date.svg" alt="Icone d'un calendrier" class="date-icone">
                                 <time datetime="2020-02-12" class="date">12/02/2020</time>

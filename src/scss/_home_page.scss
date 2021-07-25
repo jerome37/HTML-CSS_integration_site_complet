@@ -13,10 +13,10 @@
     .site-desc {
         position: absolute;
         @include siteDescLayOut(flex-end, 100%, -60%, 0%);
-        .desc {
+        .site-title {
             @include heroDesc($size32);
         }
-        .cta-meet {
+        .desc-button {
             @include heroButton($size20);
         }
     }
@@ -35,10 +35,10 @@
         .site-desc {
             position: absolute;
             @include siteDescLayOut(flex-end, 100%, -70%, 0%);
-            .desc {
+            .site-title {
                 @include heroDesc($size32);
             }
-            .cta-meet {
+            .desc-button {
                 @include heroButton($size20);
             }
         }
@@ -58,10 +58,10 @@
         .site-desc {
             position: absolute;
             @include siteDescLayOut(flex-end, 100%, -70%, 0%);
-            .desc {
+            .site-title {
                 @include heroDesc($size46);
             }
-            .cta-meet {
+            .desc-button {
                 @include heroButton($size30);
             }
         }
@@ -81,10 +81,10 @@
         .site-desc {
             position: absolute;
             @include siteDescLayOut(flex-end, 75%, -70%, 30%);
-            .desc {
+            .site-title {
                 @include heroDesc($size48);
             }
-            .cta-meet {
+            .desc-button {
                 @include heroButton($size32);
             }
         }
@@ -104,10 +104,10 @@
         .site-desc {
             position: absolute;
             @include siteDescLayOut(flex-end, 75%, -89%, 34%);
-            .desc {
+            .site-title {
                 @include heroDesc($size72);
             }
-            .cta-meet {
+            .desc-button {
                 @include heroButton($size40);
             }
         }

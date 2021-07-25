@@ -3,7 +3,7 @@
 .site-footer {
     @include section(4rem, $accent, $borderGrey);
     .container {
-        @include gridContainer($ctnrWidth1, 3, 1, 3rem);
+        @include gridContainer($ctnrWidth1, 3, 1, 3rem, center, center);
         .contacts {
             @include footerContacts($size16);
         }
@@ -25,7 +25,7 @@
     .site-footer {
         @include section(4rem, $accent, $borderGrey);
         .container {
-            @include gridContainer($ctnrWidth2, 3, 1, 4rem);
+            @include gridContainer($ctnrWidth2, 3, 1, 4rem, center, center);
             .contacts {
                 @include footerContacts($size18);
             }
@@ -48,7 +48,7 @@
     .site-footer {
         @include section(4rem, $accent, $borderGrey);
         .container {
-            @include gridContainer($ctnrWidth3, 1, 3, 3rem);
+            @include gridContainer($ctnrWidth3, 1, 3, 3rem, flex-start, start);
             .contacts {
                 @include footerContacts($size16);
             }
@@ -71,7 +71,7 @@
     .site-footer {
         @include section(4rem, $accent, $borderGrey);
         .container {
-            @include gridContainer($ctnrWidth4, 1, 3, 3rem);
+            @include gridContainer($ctnrWidth4, 1, 3, 3rem, flex-start, start);
             .contacts {
                 @include footerContacts($size18);
             }
@@ -94,7 +94,7 @@
     .site-footer {
         @include section(4rem, $accent, $borderGrey);
         .container {
-            @include gridContainer($ctnrWidth5, 1, 3, 12rem);
+            @include gridContainer($ctnrWidth5, 1, 3, 12rem, flex-start, start);
             .contacts {
                 @include footerContacts($size20);
             }
